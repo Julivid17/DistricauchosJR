@@ -30,7 +30,7 @@
   body{font-family:'IBM Plex Sans',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   a{color:inherit;text-decoration:none}
   img,svg{display:block;max-width:100%}
-  .wrap{max-width:var(--maxw);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad);box-sizing:border-box;width:100%}
 
   h1,h2,h3{font-family:'Archivo',sans-serif;line-height:1.05;letter-spacing:-.02em;color:var(--navy)}
   .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--blue-deep);font-weight:600;display:inline-flex;align-items:center;gap:.6em}
@@ -169,6 +169,33 @@
   @keyframes scrollx{to{transform:translateX(calc(-50% - 9px))}}
   .cli-note{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:#8DA3B6;margin-top:22px;letter-spacing:.04em}
 
+
+  /* catalogo */
+  #catalogo{background:var(--paper)}
+  .cat-tools{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;margin-bottom:26px}
+  .cat-search{position:relative;flex:1;min-width:240px;max-width:380px}
+  .cat-search input{width:100%;font-family:'IBM Plex Sans',sans-serif;font-size:.95rem;padding:12px 14px 12px 40px;border:1.5px solid var(--line);background:var(--sky-2);color:var(--ink)}
+  .cat-search input:focus{outline:none;border-color:var(--blue);background:#fff}
+  .cat-search svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);width:17px;height:17px;color:#8DA0B2;pointer-events:none}
+  .cat-count{font-family:'IBM Plex Mono',monospace;font-size:.76rem;color:#8DA0B2;letter-spacing:.05em;white-space:nowrap}
+  .cat-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+  .chip{font-family:'IBM Plex Sans',sans-serif;font-size:.84rem;font-weight:600;padding:8px 15px;border:1.5px solid var(--line);background:#fff;color:var(--ink-soft);cursor:pointer;transition:all .15s;border-radius:2px}
+  .chip:hover{border-color:var(--blue);color:var(--blue-deep)}
+  .chip.active{background:var(--navy);border-color:var(--navy);color:#fff}
+  .cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .cat-card{border:1px solid var(--line-soft);background:#fff;padding:20px 20px 16px;display:flex;flex-direction:column;transition:border-color .16s,box-shadow .16s,transform .16s;position:relative}
+  .cat-card:hover{border-color:var(--blue);box-shadow:0 10px 26px rgba(14,44,71,.09);transform:translateY(-2px)}
+  .cc-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:9px}
+  .cc-name{font-family:'Archivo',sans-serif;font-size:1.02rem;font-weight:800;color:var(--navy);line-height:1.2}
+  .cc-tag{font-family:'IBM Plex Mono',monospace;font-size:.58rem;letter-spacing:.06em;padding:4px 7px;background:var(--sky);color:var(--blue-deep);white-space:nowrap;font-weight:600;text-transform:uppercase}
+  .cc-desc{font-size:.86rem;color:var(--ink-soft);flex:1;line-height:1.5;margin-bottom:14px}
+  .cc-cta{display:inline-flex;align-items:center;gap:7px;font-family:'Archivo',sans-serif;font-size:.8rem;font-weight:700;color:var(--wa-dark,#128C4A);background:none;border:none;padding:0;cursor:pointer;transition:gap .15s}
+  .cc-cta:hover{gap:11px}
+  .cc-cta svg{width:15px;height:15px;flex:none}
+  .cat-empty{grid-column:1/-1;text-align:center;padding:40px 20px;color:#8DA0B2;font-family:'IBM Plex Mono',monospace;font-size:.85rem}
+  @media(max-width:980px){.cat-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:640px){.cat-grid{grid-template-columns:1fr}.cat-tools{flex-direction:column;align-items:stretch}.cat-search{max-width:none}}
+
   /* fleet carousel */
   #flota{background:var(--sky-2)}
   .fleet{position:relative;max-width:940px;margin:0 auto;border:1px solid var(--line);background:var(--navy);overflow:hidden;box-shadow:0 18px 50px rgba(14,44,71,.16)}
@@ -232,7 +259,9 @@
   .reveal.in{opacity:1;transform:none}
 
   @media(max-width:980px){
-    .hero-inner{grid-template-columns:1fr;gap:40px}
+    .hero-inner{display:flex;flex-direction:column;gap:0;padding:clamp(44px,7vw,80px) 0}
+    .hero-inner > div:last-child{display:none}
+    .hero{overflow:hidden;max-width:100vw}
     .brand-panel{max-width:440px}
     .mat-grid{grid-template-columns:repeat(2,1fr)}
     .lines-grid{grid-template-columns:repeat(2,1fr)}
@@ -277,7 +306,7 @@
     <nav>
       <ul class="navlinks" id="navlinks">
         <li><a href="#materiales" data-es="Materiales" data-en="Materials">Materiales</a></li>
-        <li><a href="#lineas" data-es="Líneas" data-en="Lines">Líneas</a></li>
+        <li><a href="#catalogo" data-es="Catálogo" data-en="Catalog">Catálogo</a></li>
         <li><a href="#sectores" data-es="Sectores" data-en="Sectors">Sectores</a></li>
         <li><a href="#nosotros" data-es="Nosotros" data-en="About">Nosotros</a></li>
         <li><a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a></li>
@@ -316,7 +345,7 @@
         <div class="bp-sub">S.A.S. · BOGOTÁ · CO</div>
         <div class="bp-specs">
           <div><div class="v">+13</div><div class="k" data-es="Años" data-en="Years">Años</div></div>
-          <div><div class="v">6</div><div class="k" data-es="Familias de Caucho" data-en="Families">Familias de Caucho</div></div>
+          <div><div class="v">6</div><div class="k" data-es="Familias" data-en="Families">Familias</div></div>
           <div><div class="v">24h</div><div class="k" data-es="Respuesta" data-en="Response">Respuesta</div></div>
         </div>
       </div>
@@ -328,7 +357,7 @@
 <section class="trust" aria-label="Indicadores">
   <div class="wrap">
     <div class="trust-cell"><div class="num">+13</div><div class="lbl" data-es="Años distribuyendo" data-en="Years distributing">Años distribuyendo</div></div>
-    <div class="trust-cell"><div class="num">6</div><div class="lbl" data-es="Familias de caucho" data-en="Rubber families">Familias de caucho</div></div>
+    <div class="trust-cell"><div class="num">+50</div><div class="lbl" data-es="Productos en catálogo" data-en="Products in catalog">Productos en catálogo</div></div>
     <div class="trust-cell"><div class="num">24h</div><div class="lbl" data-es="Respuesta a cotización" data-en="Quote response">Respuesta a cotización</div></div>
     <div class="trust-cell"><div class="num">4664</div><div class="lbl" data-es="CIIU · Insumos industriales" data-en="Industry code · supplies">CIIU · Insumos industriales</div></div>
   </div>
@@ -517,6 +546,96 @@
   </div>
 </section>
 
+
+<!-- CATALOGO -->
+<section class="section" id="catalogo">
+  <div class="wrap">
+    <div class="section-head reveal" style="margin-bottom:30px">
+      <span class="eyebrow" data-es="Catálogo completo" data-en="Full catalog">Catálogo completo</span>
+      <h2 data-es="Más de 50 productos en existencia" data-en="Over 50 products in stock">Más de 50 productos en existencia</h2>
+      <p data-es="Busque el insumo que necesita y cotícelo al instante por WhatsApp. Si no lo encuentra, escríbanos: lo conseguimos." data-en="Find the input you need and quote it instantly on WhatsApp. Don't see it? Write us — we'll source it.">Busque el insumo que necesita y cotícelo al instante por WhatsApp. Si no lo encuentra, escríbanos: lo conseguimos.</p>
+      <div class="accent-rule"></div>
+    </div>
+
+    <div class="cat-tools reveal">
+      <div class="cat-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input type="text" id="catSearch" data-es-ph="Buscar producto (ej. nitrilo, azufre, resina)" data-en-ph="Search product (e.g. nitrile, sulfur, resin)" placeholder="Buscar producto (ej. nitrilo, azufre, resina)">
+      </div>
+      <div class="cat-count" id="catCount"></div>
+    </div>
+
+    <div class="cat-chips reveal" id="catChips"></div>
+    <div class="cat-grid" id="catGrid"></div>
+  </div>
+</section>
+<script>
+(function(){
+  const PRODUCTS = [{"n": "Caucho Sintético 1502", "c": "sint", "es": "SBR para neumáticos, bandas transportadoras y suelas. Excelente resistencia al desgaste.", "en": "SBR for tires, conveyor belts and soles. Excellent wear resistance."}, {"n": "Polibutadieno", "c": "sint", "es": "Alta resistencia a la abrasión y a bajas temperaturas. Ideal para neumáticos y suelas.", "en": "High abrasion and low-temperature resistance. Ideal for tires and soles."}, {"n": "Nitrilo (NBR)", "c": "sint", "es": "Resistencia superior a aceites y combustibles. Para juntas, sellos y mangueras.", "en": "Superior oil and fuel resistance. For gaskets, seals and hoses."}, {"n": "EPDM", "c": "sint", "es": "Excepcional resistencia a la intemperie, el ozono y los químicos. Para sellos y techos.", "en": "Exceptional weather, ozone and chemical resistance. For seals and roofing."}, {"n": "Solprene 1205", "c": "sint", "es": "SBR modificado con excelente resistencia al desgaste y fácil procesamiento.", "en": "Modified SBR with excellent wear resistance and easy processing."}, {"n": "Nitrilo al 40%", "c": "sint", "es": "Máxima resistencia a aceites, combustibles y químicos agresivos.", "en": "Maximum resistance to oils, fuels and aggressive chemicals."}, {"n": "KAMEL", "c": "sint", "es": "Caucho especializado que combina resistencia, flexibilidad y durabilidad.", "en": "Specialty rubber combining strength, flexibility and durability."}, {"n": "Ripio Fino", "c": "sint", "es": "Material granular para mezclas de concreto, morteros y agregados de caucho.", "en": "Granular material for concrete mixes, mortars and rubber aggregates."}, {"n": "TSR 10 / TSR 20", "c": "nat", "es": "Caucho natural de alta calidad con excepcional resistencia y elasticidad.", "en": "High-grade natural rubber with exceptional strength and elasticity."}, {"n": "Orejas", "c": "nat", "es": "Caucho natural para sellado efectivo y resistencia al desgaste.", "en": "Natural rubber for effective sealing and wear resistance."}, {"n": "Lámina", "c": "nat", "es": "Lámina versátil para aislamiento, revestimientos y protección contra impactos.", "en": "Versatile sheet for insulation, lining and impact protection."}, {"n": "Caucho L-5", "c": "nat", "es": "Alta resistencia al desgaste, impactos y cargas pesadas.", "en": "High resistance to wear, impact and heavy loads."}, {"n": "MBT", "c": "acel", "es": "Acelerante de vulcanización que mejora elasticidad y resistencia al desgaste.", "en": "Vulcanization accelerator improving elasticity and wear resistance."}, {"n": "MBT Predisperso", "c": "acel", "es": "MBT en formato predisperso para una mezcla más eficiente y homogénea.", "en": "Pre-dispersed MBT for more efficient, homogeneous mixing."}, {"n": "MBTS", "c": "acel", "es": "Acelerante de curado moderado y controlado, sin sobrecalentamiento.", "en": "Moderate, controlled-cure accelerator without overheating."}, {"n": "MBTS Predisperso", "c": "acel", "es": "MBTS predisperso para curado uniforme y fácil incorporación.", "en": "Pre-dispersed MBTS for uniform curing and easy incorporation."}, {"n": "TMTD", "c": "acel", "es": "Acelerante ultra rápido para procesos de curado más cortos.", "en": "Ultra-fast accelerator for shorter curing processes."}, {"n": "TMTD Predisperso", "c": "acel", "es": "TMTD predisperso para distribución uniforme y curado rápido.", "en": "Pre-dispersed TMTD for uniform distribution and fast curing."}, {"n": "DPG", "c": "acel", "es": "Acelerante secundario que refina y controla la velocidad de vulcanización.", "en": "Secondary accelerator that refines and controls cure speed."}, {"n": "CBS", "c": "acel", "es": "Acelerante primario de curado moderado con excelente control del proceso.", "en": "Primary moderate-cure accelerator with excellent process control."}, {"n": "ZMBT", "c": "acel", "es": "Equilibrio entre velocidad de curado y estabilidad térmica.", "en": "Balance between cure speed and thermal stability."}, {"n": "BHT", "c": "acel", "es": "Antioxidante que previene la oxidación y prolonga la vida útil del caucho.", "en": "Antioxidant preventing oxidation and extending rubber service life."}, {"n": "6PPD", "c": "acel", "es": "Antioxidante y estabilizante contra el ozono y el envejecimiento prematuro.", "en": "Antioxidant and stabilizer against ozone and premature aging."}, {"n": "Polietilenglicol (PEG)", "c": "acel", "es": "Plastificante y humectante que mejora la procesabilidad de las mezclas.", "en": "Plasticizer and humectant improving compound processability."}, {"n": "TMQ", "c": "acel", "es": "Antioxidante RD que protege ante altas temperaturas y exposición a la luz.", "en": "RD antioxidant protecting against high temperatures and light exposure."}, {"n": "OZONI", "c": "acel", "es": "Agente especializado que mejora la resistencia al ozono en compuestos.", "en": "Specialty agent improving ozone resistance in compounds."}, {"n": "Antioxidante Manchante", "c": "acel", "es": "Previene la oxidación y el envejecimiento prematuro del compuesto.", "en": "Prevents oxidation and premature aging of the compound."}, {"n": "SPC", "c": "acel", "es": "Agente de curado y reforzador que mejora la adhesión con textiles y metales.", "en": "Curing agent and reinforcer improving adhesion to textiles and metals."}, {"n": "Peróxido", "c": "quim", "es": "Agente de vulcanización con control preciso del proceso de curado.", "en": "Vulcanizing agent with precise cure-process control."}, {"n": "ZDBC", "c": "quim", "es": "Acelerante con propiedades de refuerzo y resistencia a la intemperie.", "en": "Accelerator with reinforcing and weather-resistance properties."}, {"n": "ZDEC", "c": "quim", "es": "Acelerante de curado rápido con protección adicional al ozono.", "en": "Fast-cure accelerator with added ozone protection."}, {"n": "Ácido Esteárico", "c": "quim", "es": "Agente de procesado, plastificante y antiadherente para mezclas.", "en": "Processing aid, plasticizer and anti-stick agent for compounds."}, {"n": "Azufre Malla 400", "c": "quim", "es": "Agente de vulcanización de fácil dispersión en las mezclas.", "en": "Easily dispersible vulcanizing agent for compounds."}, {"n": "Azufre Predisperso", "c": "quim", "es": "Azufre procesado para lograr una dispersión uniforme y curado consistente.", "en": "Processed sulfur for uniform dispersion and consistent curing."}, {"n": "Colofonia", "c": "quim", "es": "Resina natural de pino que mejora la adhesión, flexibilidad y resistencia.", "en": "Natural pine resin improving adhesion, flexibility and strength."}, {"n": "Sílice ZQ356", "c": "quim", "es": "Agente de refuerzo que mejora resistencia, elasticidad y durabilidad.", "en": "Reinforcing agent improving strength, elasticity and durability."}, {"n": "Sílica Hisile Polvo", "c": "quim", "es": "Refuerzo de estructura fina que optimiza el proceso de vulcanización.", "en": "Fine-structure reinforcement optimizing the vulcanization process."}, {"n": "Caolín", "c": "quim", "es": "Carga mineral de refuerzo con estabilidad dimensional y menor costo.", "en": "Mineral reinforcing filler with dimensional stability and lower cost."}, {"n": "Negro de Humo N-550", "c": "quim", "es": "Refuerzo para alta resistencia al desgaste, abrasión y estabilidad UV.", "en": "Reinforcement for high wear, abrasion resistance and UV stability."}, {"n": "Negro de Humo N-330", "c": "quim", "es": "Refuerzo con excelente estabilidad térmica y resistencia a la intemperie.", "en": "Reinforcement with excellent thermal stability and weather resistance."}, {"n": "Óxido de Zinc", "c": "quim", "es": "Activador de vulcanización y refuerzo. Mejora resistencia y durabilidad.", "en": "Vulcanization activator and reinforcement. Improves strength and durability."}, {"n": "Óxido de Zinc Activo", "c": "quim", "es": "Forma altamente reactiva para un curado más eficiente y efectivo.", "en": "Highly reactive form for more efficient, effective curing."}, {"n": "Cera Antilux", "c": "quim", "es": "Acabado brillante, desmoldeo y protección adicional contra la intemperie.", "en": "Glossy finish, mold release and added weather protection."}, {"n": "Carbonatos", "c": "quim", "es": "Cargas que mejoran la procesabilidad y reducen costos sin perder calidad.", "en": "Fillers improving processability and cutting costs without losing quality."}, {"n": "PVI", "c": "quim", "es": "Aditivo que controla la velocidad de vulcanización y mejora la estabilidad.", "en": "Additive controlling cure rate and improving stability."}, {"n": "Estearato de Zinc", "c": "quim", "es": "Lubricante y desmoldeante que facilita el manejo de las mezclas.", "en": "Lubricant and mold-release agent easing compound handling."}, {"n": "Resina E-260", "c": "res", "es": "Resina fenólica modificada como agente adhesivo y de refuerzo.", "en": "Modified phenolic resin as adhesive and reinforcing agent."}, {"n": "Resina C9", "c": "res", "es": "Resina hidrocarburo aromática que mejora dureza, resistencia y adhesión.", "en": "Aromatic hydrocarbon resin improving hardness, strength and adhesion."}, {"n": "Resina Fenólica", "c": "res", "es": "Alta resistencia al calor y gran durabilidad. Refuerza la adhesión.", "en": "High heat resistance and great durability. Boosts adhesion."}, {"n": "Resina Wingtack", "c": "res", "es": "Mejora la pegajosidad y la cohesión en compuestos de caucho.", "en": "Improves tack and cohesion in rubber compounds."}];
+  const CATS = [{"k": "all", "es": "Todos", "en": "All"}, {"k": "sint", "es": "Cauchos sintéticos", "en": "Synthetic rubber"}, {"k": "nat", "es": "Cauchos naturales", "en": "Natural rubber"}, {"k": "acel", "es": "Acelerantes y antioxidantes", "en": "Accelerators & antioxidants"}, {"k": "quim", "es": "Otros químicos", "en": "Other chemicals"}, {"k": "res", "es": "Resinas", "en": "Resins"}];
+  const lang = () => document.body.getAttribute('data-lang') || 'es';
+  const grid = document.getElementById('catGrid');
+  const chips = document.getElementById('catChips');
+  const countEl = document.getElementById('catCount');
+  const search = document.getElementById('catSearch');
+  let active = 'all';
+
+  const catName = k => { const c = CATS.find(x=>x.k===k); return c ? c[lang()] : ''; };
+
+  function waFor(name){
+    const msg = lang()==='es'
+      ? 'Hola Districauchos JR, quisiera cotizar: ' + name
+      : 'Hello Districauchos JR, I would like a quote for: ' + name;
+    return 'https://wa.me/' + (window.WA_NUMBER||'573152642152') + '?text=' + encodeURIComponent(msg);
+  }
+
+  function norm(s){ return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,''); }
+
+  function render(){
+    const q = norm(search.value.trim());
+    const L = lang();
+    const list = PRODUCTS.filter(p =>
+      (active==='all' || p.c===active) &&
+      (!q || norm(p.n).includes(q) || norm(p[L]).includes(q))
+    );
+    countEl.textContent = L==='es'
+      ? list.length + ' de ' + PRODUCTS.length + ' productos'
+      : list.length + ' of ' + PRODUCTS.length + ' products';
+    if(!list.length){
+      grid.innerHTML = '<div class="cat-empty">'+(L==='es'
+        ? 'No encontramos ese producto — escríbanos por WhatsApp y se lo conseguimos.'
+        : "We couldn't find that product — message us on WhatsApp and we'll source it.")+'</div>';
+      return;
+    }
+    grid.innerHTML = list.map(p => `
+      <article class="cat-card">
+        <div class="cc-top">
+          <span class="cc-name">${p.n}</span>
+          <span class="cc-tag">${catName(p.c)}</span>
+        </div>
+        <p class="cc-desc">${p[L]}</p>
+        <a class="cc-cta" href="${waFor(p.n)}" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.7.9 3.7 1.4 5.8 1.4 6.6 0 12-5.4 12-12S18.6 0 12 0zm0 21.8c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.6-1.5-3.4-1.5-5.3C2.6 6.8 6.8 2.6 12 2.6S21.4 6.8 21.4 12 17.2 21.8 12 21.8z"/></svg>
+          ${L==='es' ? 'Cotizar este producto' : 'Quote this product'}
+        </a>
+      </article>`).join('');
+  }
+
+  function renderChips(){
+    const L = lang();
+    chips.innerHTML = CATS.map(c =>
+      `<button class="chip${c.k===active?' active':''}" data-k="${c.k}">${c[L]}</button>`).join('');
+    chips.querySelectorAll('.chip').forEach(b=>b.addEventListener('click',()=>{
+      active = b.dataset.k; renderChips(); render();
+    }));
+  }
+
+  search.addEventListener('input', render);
+  renderChips(); render();
+  window.__renderCatalog = () => { renderChips(); render(); };
+})();
+</script>
+
 <!-- FLOTA -->
 <section class="section" id="flota">
   <div class="wrap">
@@ -646,8 +765,9 @@
     <div class="foot-col">
       <h4 data-es="Contacto" data-en="Contact">Contacto</h4>
       <p>Calle 18 Sur 29 B 32<br>Bogotá D.C., Colombia</p>
-      <a href="#" id="footWa">WhatsApp: +57 315 264 2152</a>
-      <a href="mailto:comercial@districauchosjr.com">comercial@districauchosjr.com</a>
+      <a href="#" id="footWa">WhatsApp: 315 264 2152</a>
+      <p>Tel: (601) 480 6004</p>
+      <a href="mailto:districauchosjrsas@hotmail.com">districauchosjrsas@hotmail.com</a>
       <a href="https://www.facebook.com/pedroatle59/?locale=es_LA" target="_blank" rel="noopener">Facebook</a>
     </div>
     <div class="foot-col">
@@ -670,7 +790,7 @@
 
 <script>
   // ====== CONFIG: cambia por los datos reales del cliente ======
-  const WA_NUMBER = "573152642152"; // formato internacional sin + ni espacios
+  const WA_NUMBER = "573152642152"; window.WA_NUMBER = WA_NUMBER; // formato internacional sin + ni espacios
   const waLink = (msg) => `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
 
   // ---- clients marquee (placeholder logos: reemplazar por logos reales) ----
@@ -709,6 +829,7 @@
       ? 'Districauchos JR S.A.S. | Insumos de caucho y química industrial · Bogotá'
       : 'Districauchos JR S.A.S. | Industrial rubber & chemical supplies · Bogotá';
     langBtn.textContent = lang==='es' ? 'EN' : 'ES';
+    if(window.__renderCatalog) window.__renderCatalog();
     const def = waMsgs[lang];
     ['waFloat','heroWa','waDirect','footWa'].forEach(id=>{
       const el=document.getElementById(id); if(el) el.href=waLink(def);

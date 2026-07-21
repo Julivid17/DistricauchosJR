@@ -170,6 +170,25 @@
   .cli-note{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:#8DA3B6;margin-top:22px;letter-spacing:.04em}
 
 
+
+  /* proposito: mision y vision */
+  #proposito{background:linear-gradient(160deg,var(--navy),var(--navy-2));color:#fff;position:relative;overflow:hidden}
+  #proposito .grid-bg{position:absolute;inset:0;opacity:.4;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:46px 46px;mask-image:radial-gradient(ellipse 70% 70% at 20% 0%,#000 30%,transparent 80%)}
+  #proposito .section-head h2{color:#fff}
+  #proposito .section-head p{color:#B7C8D8}
+  .mv-badge{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(124,196,238,.35);background:rgba(46,151,212,.1);padding:9px 15px;margin-bottom:34px;font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.08em;color:#9FC9E8;position:relative}
+  .mv-badge svg{width:15px;height:15px;color:var(--blue);flex:none}
+  .mv-grid{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.14)}
+  .mv-card{background:var(--navy);padding:36px 34px 38px;display:flex;flex-direction:column}
+  .mv-head{display:flex;align-items:center;gap:13px;margin-bottom:20px}
+  .mv-ico{width:44px;height:44px;border:1px solid rgba(124,196,238,.4);display:flex;align-items:center;justify-content:center;color:var(--blue);flex:none}
+  .mv-ico svg{width:22px;height:22px}
+  .mv-card h3{font-family:'Archivo',sans-serif;font-size:1.35rem;font-weight:800;color:#fff;letter-spacing:-.01em}
+  .mv-card h3 small{display:block;font-family:'IBM Plex Mono',monospace;font-size:.6rem;font-weight:500;letter-spacing:.2em;color:#7FA0BC;margin-top:4px;text-transform:uppercase}
+  .mv-card p{font-size:.96rem;color:#C3D2E0;line-height:1.68}
+  .mv-rule{width:40px;height:3px;background:var(--blue);margin-bottom:18px}
+  @media(max-width:860px){.mv-grid{grid-template-columns:1fr}.mv-card{padding:30px 26px 32px}}
+
   /* catalogo */
   #catalogo{background:var(--paper)}
   .cat-tools{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;margin-bottom:26px}
@@ -308,7 +327,7 @@
         <li><a href="#materiales" data-es="Materiales" data-en="Materials">Materiales</a></li>
         <li><a href="#catalogo" data-es="Catálogo" data-en="Catalog">Catálogo</a></li>
         <li><a href="#sectores" data-es="Sectores" data-en="Sectors">Sectores</a></li>
-        <li><a href="#nosotros" data-es="Nosotros" data-en="About">Nosotros</a></li>
+        <li><a href="#proposito" data-es="Nosotros" data-en="About">Nosotros</a></li>
         <li><a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a></li>
       </ul>
     </nav>
@@ -369,74 +388,68 @@
     <div class="section-head reveal">
       <span class="eyebrow" data-es="Catálogo de materiales" data-en="Material catalog">Catálogo de materiales</span>
       <h2 data-es="Las familias de caucho que distribuimos" data-en="The rubber families we distribute">Las familias de caucho que distribuimos</h2>
-      <p data-es="Suministramos elastómeros en formas primarias y compuestos. Cada uno se elige por su resistencia química, rango de temperatura y dureza." data-en="We supply elastomers in primary forms and compounds. Each is chosen for its chemical resistance, temperature range and hardness.">Suministramos elastómeros en formas primarias y compuestos. Cada uno se elige por su resistencia química, rango de temperatura y dureza.</p>
+      <p data-es="Distribuimos estas familias de elastómeros en formas primarias y compuestos. Cada una se elige según la resistencia química y mecánica que exige su proceso." data-en="We distribute these elastomer families in primary forms and compounds. Each is chosen for the chemical and mechanical resistance your process demands.">Suministramos elastómeros en formas primarias y compuestos. Cada uno se elige por su resistencia química, rango de temperatura y dureza.</p>
       <div class="accent-rule"></div>
     </div>
     <div class="mat-grid">
-
       <article class="mat-card reveal">
-        <div class="mat-top"><h3>EPDM</h3><span class="mat-code">EPDM</span></div>
+        <div class="mat-top"><h3>SBR</h3><span class="mat-code">SBR</span></div>
         <svg class="mat-svg" viewBox="0 0 200 62" fill="none" aria-hidden="true"><rect x="20" y="13" width="160" height="36" rx="3" stroke="currentColor" stroke-width="2.5"/><rect x="34" y="25" width="132" height="12" fill="currentColor" opacity=".12"/></svg>
-        <p class="mat-desc" data-es="Polímero de baja densidad con excelente resistencia al ozono, agua, vapor e intemperie. Ideal para usos a la intemperie y contacto con agua." data-en="Low-density polymer with excellent resistance to ozone, water, steam and weathering. Ideal for outdoor use and water contact.">Polímero de baja densidad con excelente resistencia al ozono, agua, vapor e intemperie. Ideal para usos a la intemperie y contacto con agua.</p>
+        <p class="mat-desc" data-es="Estireno-butadieno, el caucho sintético más versátil. Excelente resistencia al desgaste y buenas propiedades mecánicas." data-en="Styrene-butadiene, the most versatile synthetic rubber. Excellent wear resistance and solid mechanical properties.">Estireno-butadieno, el caucho sintético más versátil. Excelente resistencia al desgaste y buenas propiedades mecánicas.</p>
         <div class="mat-specs">
-          <div><span class="sk" data-es="DUREZA" data-en="HARDNESS">DUREZA</span><span class="sv">35–90 Shore A</span></div>
-          <div><span class="sk" data-es="RESISTE" data-en="RESISTS">RESISTE</span><span class="sv" data-es="Ozono · Agua · Vapor" data-en="Ozone · Water · Steam">Ozono · Agua · Vapor</span></div>
-          <div><span class="sk" data-es="FORMA" data-en="FORM">FORMA</span><span class="sv" data-es="Plancha · Compuesto" data-en="Sheet · Compound">Plancha · Compuesto</span></div>
+          <div><span class="sk" data-es="RESISTE" data-en="RESISTS">RESISTE</span><span class="sv" data-es="Desgaste · Abrasión" data-en="Wear · Abrasion">Desgaste · Abrasión</span></div>
+          <div><span class="sk" data-es="APLICACIÓN" data-en="APPLICATION">APLICACIÓN</span><span class="sv" data-es="Neumáticos · Bandas · Suelas" data-en="Tires · Belts · Soles">Neumáticos · Bandas · Suelas</span></div>
+          <div><span class="sk" data-es="PRODUCTOS" data-en="PRODUCTS">PRODUCTOS</span><span class="sv" data-es="1502 · Solprene 1205" data-en="1502 · Solprene 1205">1502 · Solprene 1205</span></div>
         </div>
       </article>
-
       <article class="mat-card reveal">
-        <div class="mat-top"><h3>Neopreno®</h3><span class="mat-code">CR</span></div>
-        <svg class="mat-svg" viewBox="0 0 200 62" fill="none" aria-hidden="true"><circle cx="100" cy="31" r="21" stroke="currentColor" stroke-width="2.5"/><circle cx="100" cy="31" r="10" stroke="currentColor" stroke-width="2.5" opacity=".4"/></svg>
-        <p class="mat-desc" data-es="Cloropreno con excelente resistencia al ozono y al agua y buen comportamiento a la compresión. Para sellos y empaques de acueducto." data-en="Chloroprene with excellent ozone and water resistance and good compression behavior. For waterworks seals and gaskets.">Cloropreno con excelente resistencia al ozono y al agua y buen comportamiento a la compresión. Para sellos y empaques de acueducto.</p>
+        <div class="mat-top"><h3>Polibutadieno</h3><span class="mat-code">BR</span></div>
+        <svg class="mat-svg" viewBox="0 0 200 62" fill="none" aria-hidden="true"><circle cx="80" cy="31" r="16" stroke="currentColor" stroke-width="2.5"/><circle cx="120" cy="31" r="16" stroke="currentColor" stroke-width="2.5"/></svg>
+        <p class="mat-desc" data-es="Alta resistencia a la abrasión y capacidad para soportar bajas temperaturas. Mejora la flexibilidad del producto final." data-en="High abrasion resistance and low-temperature performance. Improves final product flexibility.">Alta resistencia a la abrasión y capacidad para soportar bajas temperaturas. Mejora la flexibilidad del producto final.</p>
         <div class="mat-specs">
-          <div><span class="sk" data-es="DUREZA" data-en="HARDNESS">DUREZA</span><span class="sv">20–75 Shore A</span></div>
-          <div><span class="sk" data-es="RESISTE" data-en="RESISTS">RESISTE</span><span class="sv" data-es="Ozono · Agua · Compresión" data-en="Ozone · Water · Compression">Ozono · Agua · Compresión</span></div>
-          <div><span class="sk" data-es="FORMA" data-en="FORM">FORMA</span><span class="sv" data-es="Plancha · Compuesto" data-en="Sheet · Compound">Plancha · Compuesto</span></div>
+          <div><span class="sk" data-es="RESISTE" data-en="RESISTS">RESISTE</span><span class="sv" data-es="Abrasión · Baja temp." data-en="Abrasion · Low temp.">Abrasión · Baja temp.</span></div>
+          <div><span class="sk" data-es="APLICACIÓN" data-en="APPLICATION">APLICACIÓN</span><span class="sv" data-es="Neumáticos · Suelas · Adhesivos" data-en="Tires · Soles · Adhesives">Neumáticos · Suelas · Adhesivos</span></div>
+          <div><span class="sk" data-es="PRODUCTOS" data-en="PRODUCTS">PRODUCTOS</span><span class="sv" data-es="Polibutadieno" data-en="Polybutadiene">Polibutadieno</span></div>
         </div>
       </article>
-
       <article class="mat-card reveal">
         <div class="mat-top"><h3>Nitrilo</h3><span class="mat-code">NBR</span></div>
         <svg class="mat-svg" viewBox="0 0 200 62" fill="none" aria-hidden="true"><circle cx="62" cy="31" r="9" stroke="currentColor" stroke-width="2.5"/><circle cx="100" cy="31" r="9" stroke="currentColor" stroke-width="2.5"/><circle cx="138" cy="31" r="9" stroke="currentColor" stroke-width="2.5"/></svg>
-        <p class="mat-desc" data-es="Acrilonitrilo-butadieno con resistencia destacada a aceites, combustibles y solventes aromáticos. Para sellos en contacto con hidrocarburos." data-en="Acrylonitrile-butadiene with strong resistance to oils, fuels and aromatic solvents. For seals in contact with hydrocarbons.">Acrilonitrilo-butadieno con resistencia destacada a aceites, combustibles y solventes aromáticos. Para sellos en contacto con hidrocarburos.</p>
+        <p class="mat-desc" data-es="Acrilonitrilo-butadieno con resistencia superior a aceites, combustibles y solventes. Para entornos industriales exigentes." data-en="Acrylonitrile-butadiene with superior resistance to oils, fuels and solvents. For demanding industrial environments.">Acrilonitrilo-butadieno con resistencia superior a aceites, combustibles y solventes. Para entornos industriales exigentes.</p>
         <div class="mat-specs">
-          <div><span class="sk" data-es="DUREZA" data-en="HARDNESS">DUREZA</span><span class="sv">20–75 Shore A</span></div>
           <div><span class="sk" data-es="RESISTE" data-en="RESISTS">RESISTE</span><span class="sv" data-es="Aceites · Combustibles" data-en="Oils · Fuels">Aceites · Combustibles</span></div>
-          <div><span class="sk" data-es="FORMA" data-en="FORM">FORMA</span><span class="sv" data-es="Plancha · Compuesto" data-en="Sheet · Compound">Plancha · Compuesto</span></div>
+          <div><span class="sk" data-es="APLICACIÓN" data-en="APPLICATION">APLICACIÓN</span><span class="sv" data-es="Juntas · Sellos · Mangueras" data-en="Gaskets · Seals · Hoses">Juntas · Sellos · Mangueras</span></div>
+          <div><span class="sk" data-es="PRODUCTOS" data-en="PRODUCTS">PRODUCTOS</span><span class="sv" data-es="Nitrilo · Nitrilo al 40%" data-en="Nitrile · 40% Nitrile">Nitrilo · Nitrilo al 40%</span></div>
         </div>
       </article>
-
       <article class="mat-card reveal">
-        <div class="mat-top"><h3>Natural / SBR</h3><span class="mat-code">NR·SBR</span></div>
-        <svg class="mat-svg" viewBox="0 0 200 62" fill="none" aria-hidden="true"><circle cx="80" cy="31" r="16" stroke="currentColor" stroke-width="2.5"/><circle cx="120" cy="31" r="16" stroke="currentColor" stroke-width="2.5"/></svg>
-        <p class="mat-desc" data-es="Isopreno y estireno-butadieno, solos o mezclados. Excelentes propiedades mecánicas y resistencia a la abrasión para usos generales." data-en="Isoprene and styrene-butadiene, alone or blended. Excellent mechanical properties and abrasion resistance for general use.">Isopreno y estireno-butadieno, solos o mezclados. Excelentes propiedades mecánicas y resistencia a la abrasión para usos generales.</p>
+        <div class="mat-top"><h3>EPDM</h3><span class="mat-code">EPDM</span></div>
+        <svg class="mat-svg" viewBox="0 0 200 62" fill="none" aria-hidden="true"><circle cx="100" cy="31" r="21" stroke="currentColor" stroke-width="2.5"/><circle cx="100" cy="31" r="10" stroke="currentColor" stroke-width="2.5" opacity=".4"/></svg>
+        <p class="mat-desc" data-es="Excepcional resistencia a la intemperie, el ozono y los productos químicos. Alta elasticidad y durabilidad en exteriores." data-en="Exceptional resistance to weathering, ozone and chemicals. High elasticity and outdoor durability.">Excepcional resistencia a la intemperie, el ozono y los productos químicos. Alta elasticidad y durabilidad en exteriores.</p>
         <div class="mat-specs">
-          <div><span class="sk" data-es="DUREZA" data-en="HARDNESS">DUREZA</span><span class="sv">20–75 Shore A</span></div>
-          <div><span class="sk" data-es="RESISTE" data-en="RESISTS">RESISTE</span><span class="sv" data-es="Abrasión · Desgaste" data-en="Abrasion · Wear">Abrasión · Desgaste</span></div>
-          <div><span class="sk" data-es="FORMA" data-en="FORM">FORMA</span><span class="sv" data-es="Plancha · Compuesto" data-en="Sheet · Compound">Plancha · Compuesto</span></div>
+          <div><span class="sk" data-es="RESISTE" data-en="RESISTS">RESISTE</span><span class="sv" data-es="Intemperie · Ozono · Químicos" data-en="Weather · Ozone · Chemicals">Intemperie · Ozono · Químicos</span></div>
+          <div><span class="sk" data-es="APLICACIÓN" data-en="APPLICATION">APLICACIÓN</span><span class="sv" data-es="Sellos · Juntas · Techos" data-en="Seals · Gaskets · Roofing">Sellos · Juntas · Techos</span></div>
+          <div><span class="sk" data-es="PRODUCTOS" data-en="PRODUCTS">PRODUCTOS</span><span class="sv" data-es="EPDM" data-en="EPDM">EPDM</span></div>
         </div>
       </article>
-
       <article class="mat-card reveal">
-        <div class="mat-top"><h3>Silicona</h3><span class="mat-code">SI</span></div>
-        <svg class="mat-svg" viewBox="0 0 200 62" fill="none" aria-hidden="true"><path d="M30 31h140" stroke="currentColor" stroke-width="2.5" stroke-dasharray="2 10" stroke-linecap="round"/><rect x="80" y="19" width="40" height="24" rx="12" stroke="currentColor" stroke-width="2.5"/></svg>
-        <p class="mat-desc" data-es="Polisiloxano estable entre −50 °C y +300 °C, con inercia química y resistencia dieléctrica. Para altas temperaturas y equipos alimenticios." data-en="Polysiloxane stable between −50 °C and +300 °C, with chemical inertness and dielectric resistance. For high temperatures and food equipment.">Polisiloxano estable entre −50 °C y +300 °C, con inercia química y resistencia dieléctrica. Para altas temperaturas y equipos alimenticios.</p>
+        <div class="mat-top"><h3>Caucho Natural</h3><span class="mat-code">NR</span></div>
+        <svg class="mat-svg" viewBox="0 0 200 62" fill="none" aria-hidden="true"><path d="M100 12c14 12 20 20 20 29a20 20 0 0 1-40 0c0-9 6-17 20-29z" stroke="currentColor" stroke-width="2.5" fill="currentColor" fill-opacity=".1"/></svg>
+        <p class="mat-desc" data-es="Propiedades excepcionales de resistencia y elasticidad. Mantiene flexibilidad y durabilidad en condiciones de alta demanda." data-en="Exceptional strength and elasticity. Keeps flexibility and durability under high-demand conditions.">Propiedades excepcionales de resistencia y elasticidad. Mantiene flexibilidad y durabilidad en condiciones de alta demanda.</p>
         <div class="mat-specs">
-          <div><span class="sk" data-es="DUREZA" data-en="HARDNESS">DUREZA</span><span class="sv">20–85 Shore A</span></div>
-          <div><span class="sk">TEMP.</span><span class="sv">−50 a +300 °C</span></div>
-          <div><span class="sk" data-es="FORMA" data-en="FORM">FORMA</span><span class="sv" data-es="Plancha · Compuesto" data-en="Sheet · Compound">Plancha · Compuesto</span></div>
+          <div><span class="sk" data-es="RESISTE" data-en="RESISTS">RESISTE</span><span class="sv" data-es="Desgaste · Impacto" data-en="Wear · Impact">Desgaste · Impacto</span></div>
+          <div><span class="sk" data-es="APLICACIÓN" data-en="APPLICATION">APLICACIÓN</span><span class="sv" data-es="Neumáticos · Aislamiento · Sellado" data-en="Tires · Insulation · Sealing">Neumáticos · Aislamiento · Sellado</span></div>
+          <div><span class="sk" data-es="PRODUCTOS" data-en="PRODUCTS">PRODUCTOS</span><span class="sv" data-es="TSR 10/20 · Orejas · Lámina · L-5" data-en="TSR 10/20 · Orejas · Sheet · L-5">TSR 10/20 · Orejas · Lámina · L-5</span></div>
         </div>
       </article>
-
       <article class="mat-card reveal">
-        <div class="mat-top"><h3>Viton®</h3><span class="mat-code">FKM</span></div>
-        <svg class="mat-svg" viewBox="0 0 200 62" fill="none" aria-hidden="true"><circle cx="100" cy="31" r="20" stroke="currentColor" stroke-width="2.5"/><circle cx="100" cy="31" r="9" stroke="currentColor" stroke-width="2.5" opacity=".4"/></svg>
-        <p class="mat-desc" data-es="Fluoroelastómero para químicos agresivos en amplio rango de temperatura (−25 a +220 °C). Sellos y válvulas para industria del petróleo." data-en="Fluoroelastomer for aggressive chemicals across a wide temperature range (−25 to +220 °C). Seals and valves for the oil industry.">Fluoroelastómero para químicos agresivos en amplio rango de temperatura (−25 a +220 °C). Sellos y válvulas para industria del petróleo.</p>
+        <div class="mat-top"><h3>Especiales</h3><span class="mat-code">MIX</span></div>
+        <svg class="mat-svg" viewBox="0 0 200 62" fill="none" aria-hidden="true"><path d="M40 44h120M40 31h120M40 18h120" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="14 9"/></svg>
+        <p class="mat-desc" data-es="Cauchos especializados y agregados para aplicaciones técnicas y mezclas industriales de alto rendimiento." data-en="Specialty rubbers and aggregates for technical applications and high-performance industrial compounds.">Cauchos especializados y agregados para aplicaciones técnicas y mezclas industriales de alto rendimiento.</p>
         <div class="mat-specs">
-          <div><span class="sk" data-es="DUREZA" data-en="HARDNESS">DUREZA</span><span class="sv">60–85 Shore A</span></div>
-          <div><span class="sk">TEMP.</span><span class="sv">−25 a +220 °C</span></div>
-          <div><span class="sk" data-es="RESISTE" data-en="RESISTS">RESISTE</span><span class="sv" data-es="Químicos · Ácidos" data-en="Chemicals · Acids">Químicos · Ácidos</span></div>
+          <div><span class="sk" data-es="RESISTE" data-en="RESISTS">RESISTE</span><span class="sv" data-es="Desgaste · Exposición química" data-en="Wear · Chemical exposure">Desgaste · Exposición química</span></div>
+          <div><span class="sk" data-es="APLICACIÓN" data-en="APPLICATION">APLICACIÓN</span><span class="sv" data-es="Juntas · Sellos · Mezclas" data-en="Gaskets · Seals · Compounds">Juntas · Sellos · Mezclas</span></div>
+          <div><span class="sk" data-es="PRODUCTOS" data-en="PRODUCTS">PRODUCTOS</span><span class="sv" data-es="KAMEL · Ripio Fino" data-en="KAMEL · Fine Crumb">KAMEL · Ripio Fino</span></div>
         </div>
       </article>
 
@@ -545,6 +558,44 @@
     </div>
   </div>
 </section>
+
+<!-- PROPOSITO: MISION Y VISION -->
+<section class="section" id="proposito">
+  <div class="grid-bg"></div>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow on-dark" data-es="Nuestro propósito" data-en="Our purpose">Nuestro propósito</span>
+      <h2 data-es="Misión y visión" data-en="Mission and vision">Misión y visión</h2>
+      <p data-es="Districauchos JR es una destacada distribuidora de productos e insumos químicos, constituida legalmente, matriculada y registrada en la Cámara de Comercio de Bogotá, especializada en insumos para la fabricación de todo tipo de cauchos. Con más de 13 años de experiencia en el mercado, nos comprometemos a ofrecer soluciones de alta calidad que satisfacen las necesidades de nuestros clientes." data-en="Districauchos JR is a leading distributor of chemical products and inputs, legally constituted and registered with the Bogotá Chamber of Commerce, specialized in inputs for manufacturing all types of rubber. With over 13 years in the market, we are committed to high-quality solutions that meet our clients' needs.">Districauchos JR es una destacada distribuidora de productos e insumos químicos, constituida legalmente, matriculada y registrada en la Cámara de Comercio de Bogotá, especializada en insumos para la fabricación de todo tipo de cauchos. Con más de 13 años de experiencia en el mercado, nos comprometemos a ofrecer soluciones de alta calidad que satisfacen las necesidades de nuestros clientes.</p>
+      <div class="accent-rule"></div>
+    </div>
+
+    <div class="mv-badge reveal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+      <span data-es="Constituida y registrada en la Cámara de Comercio de Bogotá" data-en="Constituted and registered with the Bogotá Chamber of Commerce">Constituida y registrada en la Cámara de Comercio de Bogotá</span>
+    </div>
+
+    <div class="mv-grid reveal">
+      <div class="mv-card">
+        <div class="mv-head">
+          <span class="mv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span>
+          <h3><span data-es="Misión" data-en="Mission">Misión</span><small>01 · Districauchos JR</small></h3>
+        </div>
+        <div class="mv-rule"></div>
+        <p data-es="En Districauchos JR, nuestra misión es proporcionar productos e insumos químicos de alta calidad para la fabricación de cauchos, garantizando la satisfacción de nuestros clientes a través de un servicio excepcional y soluciones personalizadas. Nos comprometemos a ser un socio estratégico en el crecimiento y desarrollo de la industria del caucho, impulsando la innovación y la sostenibilidad en nuestros procesos. Con más de 13 años de experiencia, buscamos fortalecer nuestras relaciones comerciales y contribuir al éxito de nuestros clientes, ofreciendo siempre productos confiables y de vanguardia." data-en="At Districauchos JR, our mission is to provide high-quality chemical products and inputs for rubber manufacturing, ensuring customer satisfaction through exceptional service and customized solutions. We are committed to being a strategic partner in the growth and development of the rubber industry, driving innovation and sustainability in our processes. With over 13 years of experience, we seek to strengthen our commercial relationships and contribute to our clients' success, always offering reliable and cutting-edge products.">En Districauchos JR, nuestra misión es proporcionar productos e insumos químicos de alta calidad para la fabricación de cauchos, garantizando la satisfacción de nuestros clientes a través de un servicio excepcional y soluciones personalizadas. Nos comprometemos a ser un socio estratégico en el crecimiento y desarrollo de la industria del caucho, impulsando la innovación y la sostenibilidad en nuestros procesos. Con más de 13 años de experiencia, buscamos fortalecer nuestras relaciones comerciales y contribuir al éxito de nuestros clientes, ofreciendo siempre productos confiables y de vanguardia.</p>
+      </div>
+      <div class="mv-card">
+        <div class="mv-head">
+          <span class="mv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="2.8"/></svg></span>
+          <h3><span data-es="Visión" data-en="Vision">Visión</span><small>02 · Districauchos JR</small></h3>
+        </div>
+        <div class="mv-rule"></div>
+        <p data-es="Ser reconocidos como líderes en la distribución de productos e insumos químicos para la fabricación de cauchos en Colombia y en toda América Latina. Aspiramos a ser el socio preferido de nuestros clientes, ofreciendo soluciones innovadoras y de alta calidad que impulsen la competitividad y sostenibilidad de la industria del caucho. A través de la mejora continua y el compromiso con la excelencia, buscamos expandir nuestra presencia en el mercado y contribuir al desarrollo de un sector más eficiente y responsable." data-en="To be recognized as leaders in the distribution of chemical products and inputs for rubber manufacturing in Colombia and across Latin America. We aspire to be our clients' preferred partner, offering innovative, high-quality solutions that drive the competitiveness and sustainability of the rubber industry. Through continuous improvement and a commitment to excellence, we seek to expand our market presence and contribute to a more efficient and responsible sector.">Ser reconocidos como líderes en la distribución de productos e insumos químicos para la fabricación de cauchos en Colombia y en toda América Latina. Aspiramos a ser el socio preferido de nuestros clientes, ofreciendo soluciones innovadoras y de alta calidad que impulsen la competitividad y sostenibilidad de la industria del caucho. A través de la mejora continua y el compromiso con la excelencia, buscamos expandir nuestra presencia en el mercado y contribuir al desarrollo de un sector más eficiente y responsable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
 <!-- CATALOGO -->
@@ -735,8 +786,9 @@
       <div class="field"><label data-es="Material o insumo" data-en="Material or input">Material o insumo</label>
         <select id="qm">
           <option value="" data-es="Seleccione…" data-en="Select…">Seleccione…</option>
-          <option>EPDM</option><option>Neopreno (CR)</option><option>Nitrilo (NBR)</option>
-          <option>Natural / SBR</option><option>Silicona</option><option>Viton (FKM)</option>
+          <option>SBR (1502 / Solprene)</option><option>Polibutadieno (BR)</option><option>Nitrilo (NBR)</option>
+          <option>EPDM</option><option data-es="Caucho natural (TSR, lámina…)" data-en="Natural rubber (TSR, sheet…)">Caucho natural (TSR, lámina…)</option>
+          <option data-es="Acelerantes / antioxidantes" data-en="Accelerators / antioxidants">Acelerantes / antioxidantes</option>
           <option data-es="Químicos básicos" data-en="Base chemicals">Químicos básicos</option>
           <option data-es="Plásticos / resinas" data-en="Plastics / resins">Plásticos / resinas</option>
           <option data-es="No estoy seguro — necesito asesoría" data-en="Not sure — I need advice">No estoy seguro — necesito asesoría</option>
@@ -790,7 +842,7 @@
 
 <script>
   // ====== CONFIG: cambia por los datos reales del cliente ======
-  const WA_NUMBER = "573152642152"; window.WA_NUMBER = WA_NUMBER; // formato internacional sin + ni espacios
+  const WA_NUMBER = "573152642152"; window.WA_NUMBER = WA_NUMBER; window.WA_NUMBER = WA_NUMBER; // formato internacional sin + ni espacios
   const waLink = (msg) => `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
 
   // ---- clients marquee (placeholder logos: reemplazar por logos reales) ----
@@ -829,6 +881,7 @@
       ? 'Districauchos JR S.A.S. | Insumos de caucho y química industrial · Bogotá'
       : 'Districauchos JR S.A.S. | Industrial rubber & chemical supplies · Bogotá';
     langBtn.textContent = lang==='es' ? 'EN' : 'ES';
+    if(window.__renderCatalog) window.__renderCatalog();
     if(window.__renderCatalog) window.__renderCatalog();
     const def = waMsgs[lang];
     ['waFloat','heroWa','waDirect','footWa'].forEach(id=>{

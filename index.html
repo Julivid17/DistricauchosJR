@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Districauchos JR S.A.S. | Insumos de caucho y química industrial · Bogotá</title>
+<meta name="description" content="Distribuidores mayoristas de cauchos, químicos básicos y plásticos en formas primarias para la industria. Calidad y servicio desde 2012. Bogotá, Colombia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0E2C47;
+    --navy-2:#103A5C;
+    --blue:#2E97D4;
+    --blue-deep:#1B79B5;
+    --sky:#EAF4FB;
+    --sky-2:#F4F9FD;
+    --ink:#15212C;
+    --ink-soft:#48586A;
+    --paper:#FFFFFF;
+    --line:#D6E2EC;
+    --line-soft:#E6EEF4;
+    --wa:#25D366;
+    --maxw:1200px;
+    --pad:clamp(20px,5vw,64px);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden}
+  body{font-family:'IBM Plex Sans',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  img,svg{display:block;max-width:100%}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad);box-sizing:border-box;width:100%}
+
+  h1,h2,h3{font-family:'Archivo',sans-serif;line-height:1.05;letter-spacing:-.02em;color:var(--navy)}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--blue-deep);font-weight:600;display:inline-flex;align-items:center;gap:.6em}
+  .eyebrow::before{content:"";width:22px;height:2px;background:var(--blue);display:inline-block}
+  .eyebrow.on-dark{color:#7CC4EE}
+  .eyebrow.on-dark::before{background:var(--blue)}
+
+  .btn{display:inline-flex;align-items:center;gap:.55em;font-family:'Archivo',sans-serif;font-weight:700;font-size:.98rem;padding:14px 24px;border:2px solid transparent;cursor:pointer;transition:transform .15s,background .15s,box-shadow .15s,color .15s;line-height:1;white-space:nowrap}
+  .btn-primary{background:var(--blue);color:var(--navy);border-color:var(--blue)}
+  .btn-primary:hover{background:var(--blue-deep);color:#fff;border-color:var(--blue-deep);transform:translateY(-2px)}
+  .btn-ghost{background:transparent;color:var(--navy);border-color:var(--navy)}
+  .btn-ghost:hover{background:var(--navy);color:#fff;transform:translateY(-2px)}
+  .btn-ghost.on-dark{color:#fff;border-color:rgba(255,255,255,.5)}
+  .btn-ghost.on-dark:hover{background:#fff;color:var(--navy);border-color:#fff}
+  .btn-wa{background:var(--wa);color:#fff;border-color:var(--wa)}
+  .btn-wa:hover{background:#1eb858;border-color:#1eb858;transform:translateY(-2px)}
+  .btn svg{width:18px;height:18px}
+
+  /* header */
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .2s,box-shadow .2s}
+  header.scrolled{border-bottom-color:var(--line);box-shadow:0 6px 24px rgba(14,44,71,.07)}
+  .navbar{display:flex;align-items:center;justify-content:space-between;height:74px;gap:24px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand img{width:46px;height:46px;object-fit:contain;flex:none}
+  .brand .bt{font-family:'Archivo',sans-serif;font-weight:900;font-size:1.12rem;letter-spacing:-.01em;color:var(--navy);line-height:1}
+  .brand .bt small{display:block;font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:.56rem;letter-spacing:.2em;color:var(--ink-soft);margin-top:3px}
+  .navlinks{display:flex;align-items:center;gap:28px;list-style:none}
+  .navlinks a{font-size:.92rem;font-weight:600;color:var(--ink-soft);position:relative;transition:color .15s}
+  .navlinks a:hover{color:var(--navy)}
+  .navlinks a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--blue);transition:width .2s}
+  .navlinks a:hover::after{width:100%}
+  .nav-cta{display:flex;align-items:center;gap:12px}
+  .nav-cta .btn{padding:11px 18px;font-size:.86rem}
+  .lang-btn{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:.82rem;border:1.5px solid var(--line);background:#fff;color:var(--navy);padding:9px 12px;cursor:pointer;transition:border-color .15s,color .15s}
+  .lang-btn:hover{border-color:var(--blue);color:var(--blue-deep)}
+  .burger{display:none;background:none;border:none;cursor:pointer;padding:6px;flex-direction:column;gap:5px}
+  .burger span{width:24px;height:2px;background:var(--navy);display:block;transition:.2s}
+
+  /* hero */
+  .hero{position:relative;background:linear-gradient(160deg,var(--navy),var(--navy-2));color:#fff;overflow:hidden}
+  .hero .grid-bg{position:absolute;inset:0;opacity:.55;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:46px 46px;mask-image:radial-gradient(ellipse 80% 80% at 25% 0%,#000 30%,transparent 78%)}
+  .hero .glow{position:absolute;top:-25%;right:-12%;width:60%;height:130%;background:radial-gradient(circle at center,rgba(46,151,212,.32),transparent 62%);pointer-events:none}
+  .hero-inner{position:relative;display:grid;grid-template-columns:1.45fr .95fr;gap:48px;align-items:center;padding:clamp(56px,8vw,108px) 0}
+  .hero h1{font-size:clamp(2.4rem,5.2vw,4.3rem);font-weight:800;color:#fff;max-width:15ch}
+  .hero h1 .hl{color:var(--blue);display:block}
+  .hero p.lead{font-size:clamp(1.04rem,1.4vw,1.2rem);color:#C3D2E0;max-width:48ch;margin:24px 0 32px;line-height:1.6}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px}
+
+  /* brand panel */
+  .brand-panel{position:relative;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.04);padding:34px 30px 28px;text-align:center;overflow:hidden}
+  .brand-panel .bp-tag{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:22px;color:#9FC9E8;font-family:'IBM Plex Mono',monospace;font-size:.56rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;white-space:nowrap}
+  .brand-panel .bp-tag::before,.brand-panel .bp-tag::after{content:"";height:1px;width:24px;flex:none;background:rgba(124,196,238,.45)}
+  .brand-panel .bp-logo{width:170px;height:170px;margin:6px auto 18px;object-fit:contain;filter:drop-shadow(0 8px 24px rgba(0,0,0,.3))}
+  .brand-panel .bp-name{font-family:'Archivo',sans-serif;font-weight:900;font-size:1.5rem;color:#fff;letter-spacing:-.01em}
+  .brand-panel .bp-sub{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.22em;color:#8FB6D6;margin-top:6px}
+  .bp-specs{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.14);margin-top:24px;border:1px solid rgba(255,255,255,.14)}
+  .bp-specs div{background:var(--navy);padding:14px 6px;font-family:'IBM Plex Mono',monospace}
+  .bp-specs .v{color:var(--blue);font-weight:600;font-size:1.05rem}
+  .bp-specs .k{color:#8FB6D6;font-size:.58rem;letter-spacing:.08em;margin-top:4px;text-transform:uppercase}
+
+  /* trust */
+  .trust{background:var(--ink)}
+  .trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.12)}
+  .trust-cell{background:var(--ink);padding:30px 20px;text-align:center}
+  .trust-cell .num{font-family:'Archivo',sans-serif;font-weight:900;font-size:2.2rem;color:var(--blue);line-height:1}
+  .trust-cell .lbl{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.07em;color:#9FB2C4;margin-top:9px;text-transform:uppercase}
+
+  .section{padding:clamp(62px,8.5vw,112px) 0}
+  .section-head{max-width:740px;margin-bottom:52px}
+  .section-head h2{font-size:clamp(2rem,4vw,3rem);font-weight:800;margin-top:16px}
+  .section-head p{color:var(--ink-soft);font-size:1.06rem;margin-top:18px;max-width:62ch}
+  .accent-rule{width:54px;height:4px;background:var(--blue);margin-top:22px}
+
+  /* materiales */
+  #materiales{background:var(--sky-2)}
+  .mat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .mat-card{background:var(--paper);border:1px solid var(--line-soft);position:relative;overflow:hidden;transition:transform .18s,box-shadow .18s,border-color .18s;display:flex;flex-direction:column}
+  .mat-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--blue);transform:scaleY(0);transform-origin:top;transition:transform .22s}
+  .mat-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(14,44,71,.12);border-color:var(--line)}
+  .mat-card:hover::before{transform:scaleY(1)}
+  .mat-top{display:flex;justify-content:space-between;align-items:flex-start;padding:20px 24px 0}
+  .mat-top h3{font-size:1.3rem;font-weight:800}
+  .mat-code{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.06em;color:#fff;background:var(--navy);padding:5px 9px;white-space:nowrap}
+  .mat-photo{position:relative;aspect-ratio:16/9;overflow:hidden;background:var(--sky-2)}
+  .mat-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s ease}
+  .mat-card:hover .mat-photo img{transform:scale(1.06)}
+  .mat-photo .mat-code{position:absolute;top:11px;right:11px;z-index:2;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+  .mat-desc{padding:6px 24px 18px;font-size:.92rem;color:var(--ink-soft);flex:1}
+  .mat-specs{border-top:1px solid var(--line-soft);padding:16px 24px;font-family:'IBM Plex Mono',monospace}
+  .mat-specs div{display:flex;justify-content:space-between;gap:12px;font-size:.75rem;padding:4px 0}
+  .mat-specs .sk{color:#8DA0B2;letter-spacing:.03em}
+  .mat-specs .sv{color:var(--ink);font-weight:500;text-align:right}
+
+  /* lineas */
+  .lines-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .line-card{background:var(--paper);border:1px solid var(--line-soft);position:relative;overflow:hidden;transition:border-color .18s,box-shadow .18s}
+  .line-card:hover{border-color:var(--blue);box-shadow:0 14px 34px rgba(14,44,71,.1)}
+  .line-img{position:relative;aspect-ratio:16/11;background:linear-gradient(155deg,var(--navy),var(--blue-deep));overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .line-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+  .line-card:hover .line-img img{transform:scale(1.05)}
+  .line-img .illus{width:60%;height:60%;color:rgba(255,255,255,.9)}
+  .line-img .n{position:absolute;top:12px;left:12px;font-family:'IBM Plex Mono',monospace;font-size:.66rem;font-weight:600;letter-spacing:.1em;color:var(--navy);background:var(--blue);padding:4px 8px;z-index:2}
+  .line-body{padding:22px 24px 26px}
+  .line-body h3{font-size:1.14rem;font-weight:700;margin-bottom:10px}
+  .line-body p{font-size:.9rem;color:var(--ink-soft)}
+
+  /* sectores */
+  #sectores{background:linear-gradient(160deg,var(--navy),var(--navy-2));color:#fff;position:relative;overflow:hidden}
+  #sectores .grid-bg{position:absolute;inset:0;opacity:.4;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:46px 46px;mask-image:radial-gradient(ellipse 70% 70% at 82% 100%,#000 30%,transparent 80%)}
+  #sectores .section-head h2{color:#fff}
+  #sectores .section-head p{color:#B7C8D8}
+  .sec-grid{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.14)}
+  .sec-item{background:var(--navy);padding:28px 26px;display:flex;gap:16px;align-items:flex-start;transition:background .18s}
+  .sec-item:hover{background:var(--navy-2)}
+  .sec-item .si-ico{color:var(--blue);flex:none;margin-top:2px}
+  .sec-item h4{font-family:'Archivo',sans-serif;font-size:1.02rem;font-weight:700;margin-bottom:5px;color:#fff}
+  .sec-item p{font-size:.85rem;color:#9FB4C6;line-height:1.5}
+
+  /* why */
+  .why-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:54px;align-items:center}
+  .why-list{display:flex;flex-direction:column}
+  .why-item{display:flex;gap:20px;padding:24px 0;border-top:1px solid var(--line-soft)}
+  .why-item:first-child{border-top:none}
+  .why-num{font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--blue-deep);font-size:.85rem;flex:none;padding-top:4px}
+  .why-item h3{font-size:1.2rem;font-weight:700;margin-bottom:7px}
+  .why-item p{color:var(--ink-soft);font-size:.95rem}
+  .why-visual{background:var(--navy);color:#fff;padding:44px;position:relative;overflow:hidden;align-self:stretch;display:flex;flex-direction:column;justify-content:center;min-height:340px}
+  .why-visual img{position:absolute;right:-30px;bottom:-30px;width:200px;opacity:.08}
+  .why-visual .qline{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:#7FA0BC;letter-spacing:.1em;margin-bottom:18px;position:relative}
+  .why-visual blockquote{font-family:'Archivo',sans-serif;font-size:1.45rem;font-weight:600;line-height:1.3;position:relative}
+  .why-visual blockquote b{color:var(--blue)}
+
+  /* clientes */
+  #clientes{background:var(--sky)}
+  .cli-marquee{overflow:hidden;position:relative;margin-top:8px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+  .cli-track{display:flex;gap:18px;width:max-content;animation:scrollx 32s linear infinite}
+  .cli-tile{width:170px;height:92px;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:#9CB1C4;flex:none}
+  .cli-tile svg{width:120px;height:48px}
+  @keyframes scrollx{to{transform:translateX(calc(-50% - 9px))}}
+  .cli-note{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:#8DA3B6;margin-top:22px;letter-spacing:.04em}
+
+
+
+
+
+  /* slider de familias */
+  .fam-slider{position:relative;border:1px solid var(--line);background:var(--navy);overflow:hidden;box-shadow:0 20px 54px rgba(14,44,71,.18)}
+  .fam-track{display:flex;transition:transform .6s cubic-bezier(.55,.05,.25,1)}
+  .fam-slide{min-width:100%;position:relative;background:#0C2540}
+  .fam-slide img{width:100%;height:auto;display:block;aspect-ratio:1200/615;object-fit:cover}
+  .fam-cap{background:var(--navy);border-top:1px solid rgba(255,255,255,.12);padding:18px 26px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+  .fam-cap .fc-code{font-family:'IBM Plex Mono',monospace;font-size:.66rem;letter-spacing:.1em;background:var(--blue);color:var(--navy);padding:5px 9px;font-weight:700;flex:none}
+  .fam-cap .fc-name{font-family:'Archivo',sans-serif;font-weight:800;font-size:1.05rem;color:#fff;flex:none}
+  .fam-cap .fc-desc{font-size:.9rem;color:#A9BDD1;flex:1;min-width:200px}
+  .fam-btn{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;border:none;background:rgba(255,255,255,.92);color:var(--navy);cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:3;transition:background .15s,transform .15s}
+  .fam-btn:hover{background:#fff;transform:translateY(-50%) scale(1.09)}
+  .fam-btn.prev{left:16px}.fam-btn.next{right:16px}
+  .fam-btn svg{width:20px;height:20px}
+  .fam-dots{display:flex;justify-content:center;gap:9px;margin-top:20px;flex-wrap:wrap}
+  .fam-dot{height:8px;width:26px;background:var(--line);border:none;cursor:pointer;padding:0;transition:background .2s,width .2s}
+  .fam-dot.active{background:var(--blue);width:40px}
+  .fam-bar{position:absolute;left:0;bottom:0;height:3px;background:var(--blue);width:0;z-index:4}
+  .fam-bar.run{transition:width 5s linear;width:100%}
+  @media(max-width:700px){.fam-btn{width:36px;height:36px}.fam-btn.prev{left:8px}.fam-btn.next{right:8px}
+    .fam-cap{padding:14px 16px;gap:10px}.fam-cap .fc-desc{font-size:.84rem}}
+
+  /* atajos de categoria (compactos) */
+  .cats-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+  .cat-link{background:#fff;border:1px solid var(--line-soft);padding:22px 20px 20px;text-align:left;cursor:pointer;font-family:'IBM Plex Sans',sans-serif;display:flex;flex-direction:column;gap:0;transition:border-color .16s,box-shadow .16s,transform .16s;position:relative;overflow:hidden}
+  .cat-link::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--blue);transform:scaleY(0);transform-origin:top;transition:transform .2s}
+  .cat-link:hover{border-color:var(--blue);box-shadow:0 12px 28px rgba(14,44,71,.1);transform:translateY(-3px)}
+  .cat-link:hover::before{transform:scaleY(1)}
+  .cl-ico{color:var(--blue-deep);margin-bottom:14px}
+  .cl-name{font-family:'Archivo',sans-serif;font-size:1rem;font-weight:800;color:var(--navy);line-height:1.25;margin-bottom:6px}
+  .cl-num{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:#8DA0B2;letter-spacing:.04em;margin-bottom:14px}
+  .cl-go{margin-top:auto;font-family:'Archivo',sans-serif;font-size:.8rem;font-weight:700;color:var(--blue-deep);display:inline-flex;align-items:center;gap:6px;transition:gap .15s}
+  .cat-link:hover .cl-go{gap:10px}
+  .cl-go svg{width:14px;height:14px}
+  @media(max-width:980px){.cats-grid{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:620px){.cats-grid{grid-template-columns:repeat(2,1fr)}.cat-link{padding:18px 16px 16px}.cl-ico svg{width:26px;height:26px}}
+
+  /* boton ver mas del catalogo */
+  .cat-more{text-align:center;margin-top:28px}
+  .cat-more button{font-family:'Archivo',sans-serif;font-weight:700;font-size:.94rem;padding:13px 28px;border:2px solid var(--navy);background:transparent;color:var(--navy);cursor:pointer;transition:all .15s;display:inline-flex;align-items:center;gap:9px}
+  .cat-more button:hover{background:var(--navy);color:#fff;transform:translateY(-2px)}
+  .cat-more button svg{width:16px;height:16px}
+
+  /* proposito: mision y vision */
+  #proposito{background:linear-gradient(160deg,var(--navy),var(--navy-2));color:#fff;position:relative;overflow:hidden}
+  #proposito .grid-bg{position:absolute;inset:0;opacity:.4;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:46px 46px;mask-image:radial-gradient(ellipse 70% 70% at 20% 0%,#000 30%,transparent 80%)}
+  #proposito .section-head h2{color:#fff}
+  #proposito .section-head p{color:#B7C8D8}
+  .mv-badge{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(124,196,238,.35);background:rgba(46,151,212,.1);padding:9px 15px;margin-bottom:34px;font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.08em;color:#9FC9E8;position:relative}
+  .mv-badge svg{width:15px;height:15px;color:var(--blue);flex:none}
+  .mv-grid{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.14)}
+  .mv-card{background:var(--navy);padding:36px 34px 38px;display:flex;flex-direction:column}
+  .mv-head{display:flex;align-items:center;gap:13px;margin-bottom:20px}
+  .mv-ico{width:44px;height:44px;border:1px solid rgba(124,196,238,.4);display:flex;align-items:center;justify-content:center;color:var(--blue);flex:none}
+  .mv-ico svg{width:22px;height:22px}
+  .mv-card h3{font-family:'Archivo',sans-serif;font-size:1.35rem;font-weight:800;color:#fff;letter-spacing:-.01em}
+  .mv-card h3 small{display:block;font-family:'IBM Plex Mono',monospace;font-size:.6rem;font-weight:500;letter-spacing:.2em;color:#7FA0BC;margin-top:4px;text-transform:uppercase}
+  .mv-card p{font-size:.96rem;color:#C3D2E0;line-height:1.68}
+  .mv-rule{width:40px;height:3px;background:var(--blue);margin-bottom:18px}
+  @media(max-width:860px){.mv-grid{grid-template-columns:1fr}.mv-card{padding:30px 26px 32px}}
+
+  /* catalogo */
+  #catalogo{background:var(--paper)}
+  .cat-tools{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;margin-bottom:26px}
+  .cat-search{position:relative;flex:1;min-width:240px;max-width:380px}
+  .cat-search input{width:100%;font-family:'IBM Plex Sans',sans-serif;font-size:.95rem;padding:12px 14px 12px 40px;border:1.5px solid var(--line);background:var(--sky-2);color:var(--ink)}
+  .cat-search input:focus{outline:none;border-color:var(--blue);background:#fff}
+  .cat-search svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);width:17px;height:17px;color:#8DA0B2;pointer-events:none}
+  .cat-count{font-family:'IBM Plex Mono',monospace;font-size:.76rem;color:#8DA0B2;letter-spacing:.05em;white-space:nowrap}
+  .cat-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+  .chip{font-family:'IBM Plex Sans',sans-serif;font-size:.84rem;font-weight:600;padding:8px 15px;border:1.5px solid var(--line);background:#fff;color:var(--ink-soft);cursor:pointer;transition:all .15s;border-radius:2px}
+  .chip:hover{border-color:var(--blue);color:var(--blue-deep)}
+  .chip.active{background:var(--navy);border-color:var(--navy);color:#fff}
+  .cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .cat-card{border:1px solid var(--line-soft);background:#fff;padding:20px 20px 16px;display:flex;flex-direction:column;transition:border-color .16s,box-shadow .16s,transform .16s;position:relative}
+  .cat-card:hover{border-color:var(--blue);box-shadow:0 10px 26px rgba(14,44,71,.09);transform:translateY(-2px)}
+  .cc-top{display:flex;align-items:flex-start;gap:13px;margin-bottom:11px}
+  .cc-thumb{width:56px;height:56px;object-fit:cover;border:1px solid var(--line-soft);flex:none;background:var(--sky-2)}
+  .cc-head{display:flex;flex-direction:column;gap:6px;min-width:0;flex:1}
+  .cc-head .cc-tag{align-self:flex-start}
+  .cc-name{font-family:'Archivo',sans-serif;font-size:1.02rem;font-weight:800;color:var(--navy);line-height:1.2}
+  .cc-tag{font-family:'IBM Plex Mono',monospace;font-size:.58rem;letter-spacing:.06em;padding:4px 7px;background:var(--sky);color:var(--blue-deep);white-space:nowrap;font-weight:600;text-transform:uppercase}
+  .cc-desc{font-size:.86rem;color:var(--ink-soft);flex:1;line-height:1.5;margin-bottom:14px}
+  .cc-cta{display:inline-flex;align-items:center;gap:7px;font-family:'Archivo',sans-serif;font-size:.8rem;font-weight:700;color:var(--wa-dark,#128C4A);background:none;border:none;padding:0;cursor:pointer;transition:gap .15s}
+  .cc-cta:hover{gap:11px}
+  .cc-cta svg{width:15px;height:15px;flex:none}
+  .cat-empty{grid-column:1/-1;text-align:center;padding:40px 20px;color:#8DA0B2;font-family:'IBM Plex Mono',monospace;font-size:.85rem}
+  @media(max-width:980px){.cat-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:640px){.cat-grid{grid-template-columns:1fr}.cat-tools{flex-direction:column;align-items:stretch}.cat-search{max-width:none}}
+
+  /* fleet carousel */
+  #flota{background:var(--sky-2)}
+  .fleet{position:relative;max-width:940px;margin:0 auto;border:1px solid var(--line);background:var(--navy);overflow:hidden;box-shadow:0 18px 50px rgba(14,44,71,.16)}
+  .fleet-track{display:flex;transition:transform .55s cubic-bezier(.6,.05,.25,1)}
+  .fleet-slide{min-width:100%;aspect-ratio:16/9;position:relative;display:flex;align-items:center;justify-content:center;background:#0C2540;overflow:hidden}
+  .fleet-slide .bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:blur(20px) brightness(.5);transform:scale(1.2)}
+  .fleet-slide img{position:relative;z-index:1;width:100%;height:100%;object-fit:contain;display:block}
+  .fleet-add{display:flex;flex-direction:column;align-items:center;gap:14px;color:#5E83A6;text-align:center;padding:24px}
+  .fleet-add .plus{width:62px;height:62px;border:2px dashed rgba(124,196,238,.5);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#7CC4EE}
+  .fleet-add span{font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.06em;max-width:24ch}
+  .fleet-cap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:30px 26px 18px;background:linear-gradient(transparent,rgba(8,22,38,.88));color:#fff;font-family:'IBM Plex Sans',sans-serif;font-size:.95rem;font-weight:500;display:flex;align-items:center;gap:10px}
+  .fleet-cap::before{content:"";width:18px;height:2px;background:var(--blue);flex:none}
+  .fleet-btn{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;border:none;background:rgba(255,255,255,.9);color:var(--navy);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s,transform .15s;z-index:3}
+  .fleet-btn:hover{background:#fff;transform:translateY(-50%) scale(1.08)}
+  .fleet-btn.prev{left:14px}
+  .fleet-btn.next{right:14px}
+  .fleet-btn svg{width:20px;height:20px}
+  .fleet-dots{display:flex;justify-content:center;gap:9px;margin-top:20px}
+  .fleet-dot{width:9px;height:9px;border-radius:50%;background:var(--line);border:none;cursor:pointer;padding:0;transition:background .15s,transform .15s}
+  .fleet-dot.active{background:var(--blue);transform:scale(1.25)}
+  @media(max-width:600px){.fleet-btn{width:38px;height:38px}.fleet-cap{font-size:.85rem;padding:24px 18px 14px}}
+
+  /* cotizar */
+  #cotizar{background:linear-gradient(160deg,var(--blue),var(--blue-deep));color:#fff;position:relative;overflow:hidden}
+  #cotizar .grid-bg{position:absolute;inset:0;opacity:.4;background-image:linear-gradient(rgba(255,255,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.12) 1px,transparent 1px);background-size:42px 42px}
+  .quote-inner{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+  .quote-copy .eyebrow{color:#fff}
+  .quote-copy .eyebrow::before{background:#fff}
+  .quote-copy h2{font-size:clamp(2rem,3.6vw,2.9rem);font-weight:900;color:#fff;margin:14px 0 16px}
+  .quote-copy p{font-size:1.05rem;color:#E3F1FB;max-width:44ch}
+  .quote-copy .wa-direct{margin-top:26px}
+  .quote-form{background:var(--paper);padding:32px;border:2px solid var(--navy);color:var(--ink)}
+  .quote-form h3{font-size:1.14rem;font-weight:800;margin-bottom:5px;color:var(--navy)}
+  .quote-form .fh{font-size:.85rem;color:var(--ink-soft);margin-bottom:20px}
+  .field{margin-bottom:15px}
+  .field label{display:block;font-family:'IBM Plex Mono',monospace;font-size:.66rem;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:7px}
+  .field input,.field select,.field textarea{width:100%;font-family:'IBM Plex Sans',sans-serif;font-size:.95rem;padding:12px 14px;border:1.5px solid var(--line);background:var(--sky-2);color:var(--ink)}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--blue);background:#fff}
+  .field textarea{resize:vertical;min-height:72px}
+  .quote-form .btn{width:100%;justify-content:center;margin-top:6px}
+  .quote-form .fine{font-size:.72rem;color:#8DA0B2;margin-top:12px;text-align:center}
+
+  /* footer */
+  footer{background:var(--ink);color:#fff}
+  .foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding:62px 0 48px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .foot-brand .brand .bt{color:#fff}
+  .foot-brand .brand .bt small{color:#8DA0B2}
+  .foot-brand p{color:#9FB0C0;font-size:.93rem;margin-top:18px;max-width:40ch}
+  .foot-col h4{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:#8DA0B2;margin-bottom:18px}
+  .foot-col a,.foot-col p{display:block;color:#C6D2DE;font-size:.94rem;margin-bottom:11px;transition:color .15s}
+  .foot-col a:hover{color:var(--blue)}
+  .foot-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding:24px 0;font-size:.8rem;color:#7F92A4;font-family:'IBM Plex Mono',monospace}
+
+  .wa-float{position:fixed;right:22px;bottom:22px;z-index:60;width:58px;height:58px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(37,211,102,.4);transition:transform .18s}
+  .wa-float:hover{transform:scale(1.08)}
+  .wa-float svg{width:30px;height:30px;fill:#fff}
+  .wa-float::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--wa);animation:pulse 2.4s infinite}
+  @keyframes pulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.7);opacity:0}}
+
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:980px){
+    .hero-inner{display:flex;flex-direction:column;gap:0;padding:clamp(44px,7vw,80px) 0}
+    .hero-inner > div:last-child{display:none}
+    .hero{overflow:hidden;max-width:100vw}
+    .brand-panel{max-width:440px}
+    .mat-grid{grid-template-columns:repeat(2,1fr)}
+    .lines-grid{grid-template-columns:repeat(2,1fr)}
+    .sec-grid{grid-template-columns:repeat(2,1fr)}
+    .why-grid{grid-template-columns:1fr;gap:36px}
+    .quote-inner{grid-template-columns:1fr;gap:34px}
+    .foot-top{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:760px){
+    .navlinks{display:none}
+    .nav-cta .btn-ghost{display:none}
+    .burger{display:flex}
+    .navlinks.open{display:flex;position:absolute;top:74px;left:0;right:0;flex-direction:column;gap:0;background:#fff;border-bottom:1px solid var(--line);padding:8px 0;box-shadow:0 12px 30px rgba(0,0,0,.1)}
+    .navlinks.open li{width:100%}
+    .navlinks.open a{display:block;padding:14px var(--pad)}
+    .trust .wrap{grid-template-columns:repeat(2,1fr)}
+    .mat-grid,.lines-grid,.sec-grid{grid-template-columns:1fr}
+    .foot-top{grid-template-columns:1fr}
+    .why-item{flex-direction:column;gap:8px}
+  }
+  @media(max-width:600px){
+    .nav-cta{gap:10px}
+    .nav-cta .btn-primary{display:none}
+    .brand .bt small{display:none}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;scroll-behavior:auto!important}
+    .reveal{opacity:1;transform:none;transition:none}
+    .cli-track{animation:none;justify-content:center;flex-wrap:wrap}
+  }
+</style>
+</head>
+<body data-lang="es">
+
+<!-- HEADER -->
+<header id="top">
+  <div class="wrap navbar">
+    <a href="#top" class="brand" aria-label="Districauchos JR inicio">
+      <img src="img/logo.png" alt="Districauchos JR S.A.S.">
+      <span class="bt">DISTRICAUCHOS<small data-es="JR · S.A.S. · CALIDAD Y SERVICIO" data-en="JR · S.A.S. · QUALITY & SERVICE">JR · S.A.S. · CALIDAD Y SERVICIO</small></span>
+    </a>
+    <nav>
+      <ul class="navlinks" id="navlinks">
+        <li><a href="#materiales" data-es="Materiales" data-en="Materials">Materiales</a></li>
+        <li><a href="#catalogo" data-es="Catálogo" data-en="Catalog">Catálogo</a></li>
+        <li><a href="#sectores" data-es="Sectores" data-en="Sectors">Sectores</a></li>
+        <li><a href="#proposito" data-es="Nosotros" data-en="About">Nosotros</a></li>
+        <li><a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <button class="lang-btn" id="langBtn" aria-label="Switch language">EN</button>
+      <a href="#cotizar" class="btn btn-primary" data-es="Cotizar ahora" data-en="Get a quote">Cotizar ahora</a>
+      <button class="burger" id="burger" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="grid-bg"></div>
+  <div class="glow"></div>
+  <div class="wrap hero-inner">
+    <div class="reveal">
+      <span class="eyebrow on-dark" data-es="Desde 2012 · Bogotá D.C." data-en="Since 2012 · Bogotá, Colombia">Desde 2012 · Bogotá D.C.</span>
+      <h1><span data-es="Insumos de caucho y química industrial," data-en="Industrial rubber and chemical supplies,">Insumos de caucho y química industrial,</span><span class="hl" data-es="con calidad y servicio." data-en="with quality and service.">con calidad y servicio.</span></h1>
+      <p class="lead" data-es="Distribuidores mayoristas de cauchos, químicos básicos y plásticos en formas primarias para la industria colombiana. Surtido amplio, asesoría técnica y entrega cumplida." data-en="Wholesale distributors of rubber, base chemicals and primary-form plastics for Colombian industry. Broad inventory, technical advice and on-time delivery.">Distribuidores mayoristas de cauchos, químicos básicos y plásticos en formas primarias para la industria colombiana. Surtido amplio, asesoría técnica y entrega cumplida.</p>
+      <div class="hero-cta">
+        <a href="#" id="heroWa" class="btn btn-wa">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.7.9 3.7 1.4 5.8 1.4 6.6 0 12-5.4 12-12S18.6 0 12 0zm0 21.8c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.6-1.5-3.4-1.5-5.3C2.6 6.8 6.8 2.6 12 2.6S21.4 6.8 21.4 12 17.2 21.8 12 21.8zm5.4-7.1c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.2-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>
+          <span data-es="Cotizar por WhatsApp" data-en="Quote on WhatsApp">Cotizar por WhatsApp</span>
+        </a>
+        <a href="#catalogo" class="btn btn-ghost on-dark" data-es="Ver catálogo" data-en="View catalog">Ver catálogo</a>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="brand-panel">
+        <div class="bp-tag" data-es="Calidad y Servicio" data-en="Quality &amp; Service">Calidad y Servicio</div>
+        <img class="bp-logo" src="img/logo-blanco.png" alt="Logo Districauchos JR">
+        <div class="bp-name">DISTRICAUCHOS JR</div>
+        <div class="bp-sub">S.A.S. · BOGOTÁ · CO</div>
+        <div class="bp-specs">
+          <div><div class="v">+13</div><div class="k" data-es="Años" data-en="Years">Años</div></div>
+          <div><div class="v">6</div><div class="k" data-es="Familias" data-en="Families">Familias</div></div>
+          <div><div class="v">24h</div><div class="k" data-es="Respuesta" data-en="Response">Respuesta</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="trust" aria-label="Indicadores">
+  <div class="wrap">
+    <div class="trust-cell"><div class="num">+13</div><div class="lbl" data-es="Años distribuyendo" data-en="Years distributing">Años distribuyendo</div></div>
+    <div class="trust-cell"><div class="num">+50</div><div class="lbl" data-es="Productos en catálogo" data-en="Products in catalog">Productos en catálogo</div></div>
+    <div class="trust-cell"><div class="num">24h</div><div class="lbl" data-es="Respuesta a cotización" data-en="Quote response">Respuesta a cotización</div></div>
+    <div class="trust-cell"><div class="num">4664</div><div class="lbl" data-es="CIIU · Insumos industriales" data-en="Industry code · supplies">CIIU · Insumos industriales</div></div>
+  </div>
+</section>
+
+<!-- MATERIALES -->
+<section class="section" id="materiales">
+  <div class="wrap">
+    <div class="section-head reveal" style="margin-bottom:34px">
+      <span class="eyebrow" data-es="Catálogo de materiales" data-en="Material catalog">Catálogo de materiales</span>
+      <h2 data-es="Las familias de caucho que distribuimos" data-en="The rubber families we distribute">Las familias de caucho que distribuimos</h2>
+      <p data-es="Seis familias de elastómeros en formas primarias y compuestos, para la resistencia química y mecánica que exige su proceso." data-en="Six elastomer families in primary forms and compounds, for the chemical and mechanical resistance your process demands.">Seis familias de elastómeros en formas primarias y compuestos, para la resistencia química y mecánica que exige su proceso.</p>
+      <div class="accent-rule"></div>
+    </div>
+    <div class="fam-slider reveal">
+      <div class="fam-track" id="famTrack"></div>
+      <button class="fam-btn prev" id="famPrev" aria-label="Anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <button class="fam-btn next" id="famNext" aria-label="Siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M9 6l6 6-6 6"/></svg></button>
+      <div class="fam-bar" id="famBar"></div>
+    </div>
+    <div class="fam-dots" id="famDots"></div>
+  </div>
+</section>
+<script>
+(function(){
+  const S = [{"img": "img/fam-sbr.jpg", "n": "SBR", "c": "SBR", "es": "Estireno-butadieno: el caucho sintético más versátil, con excelente resistencia al desgaste.", "en": "Styrene-butadiene: the most versatile synthetic rubber, with excellent wear resistance."}, {"img": "img/fam-br.jpg", "n": "Polibutadieno", "c": "BR", "es": "Alta resistencia a la abrasión y a bajas temperaturas. Mejora la flexibilidad del producto final.", "en": "High abrasion and low-temperature resistance. Improves final product flexibility."}, {"img": "img/fam-nbr.jpg", "n": "Nitrilo", "c": "NBR", "es": "Resistencia superior a aceites, combustibles y solventes para entornos exigentes.", "en": "Superior resistance to oils, fuels and solvents for demanding environments."}, {"img": "img/fam-epdm.jpg", "n": "EPDM", "c": "EPDM", "es": "Excepcional resistencia a la intemperie, el ozono y los productos químicos.", "en": "Exceptional resistance to weathering, ozone and chemicals."}, {"img": "img/fam-nr.jpg", "n": "Caucho Natural", "c": "NR", "es": "Propiedades excepcionales de resistencia y elasticidad en condiciones de alta demanda.", "en": "Exceptional strength and elasticity under high-demand conditions."}, {"img": "img/fam-mix.jpg", "n": "Especiales", "c": "MIX", "es": "Cauchos especializados y agregados para mezclas industriales de alto rendimiento.", "en": "Specialty rubbers and aggregates for high-performance industrial compounds."}];
+  const track=document.getElementById('famTrack'), dots=document.getElementById('famDots');
+  const bar=document.getElementById('famBar'), box=document.querySelector('.fam-slider');
+  const lang=()=>document.body.getAttribute('data-lang')||'es';
+  const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  let i=0,t=null;
+
+  function build(){
+    track.innerHTML=S.map((s,k)=>`<div class="fam-slide">
+        <img src="${s.img}" alt="${s.n}"${k?' loading="lazy"':''}>
+        <div class="fam-cap">
+          <span class="fc-code">${s.c}</span>
+          <span class="fc-name">${s.n}</span>
+          <span class="fc-desc" data-es="${s.es}" data-en="${s.en}">${s[lang()]}</span>
+        </div></div>`).join('');
+    dots.innerHTML=S.map((s,k)=>`<button class="fam-dot${k===0?' active':''}" aria-label="${s.n}"></button>`).join('');
+    dots.querySelectorAll('.fam-dot').forEach((d,k)=>d.addEventListener('click',()=>{go(k);restart();}));
+  }
+  function go(n){
+    i=(n+S.length)%S.length;
+    track.style.transform=`translateX(-${i*100}%)`;
+    dots.querySelectorAll('.fam-dot').forEach((d,k)=>d.classList.toggle('active',k===i));
+  }
+  function restart(){
+    if(reduce) return;
+    clearTimeout(t); bar.classList.remove('run'); bar.style.width='0';
+    void bar.offsetWidth; bar.classList.add('run');
+    t=setTimeout(()=>{go(i+1);restart();},5000);
+  }
+  function stop(){ clearTimeout(t); bar.classList.remove('run'); bar.style.width='0'; }
+  build(); go(0); restart();
+  document.getElementById('famPrev').addEventListener('click',()=>{go(i-1);restart();});
+  document.getElementById('famNext').addEventListener('click',()=>{go(i+1);restart();});
+  box.addEventListener('mouseenter',stop); box.addEventListener('mouseleave',restart);
+  let sx=0;
+  track.addEventListener('touchstart',e=>{sx=e.touches[0].clientX;stop();},{passive:true});
+  track.addEventListener('touchend',e=>{const d=e.changedTouches[0].clientX-sx;
+    if(Math.abs(d)>40){d<0?go(i+1):go(i-1);} restart();});
+  window.__famRelang=()=>{ const L=lang();
+    track.querySelectorAll('.fc-desc').forEach(el=>{const v=el.getAttribute('data-'+L); if(v) el.textContent=v;}); };
+})();
+</script>
+
+<!-- LINEAS -->
+<section class="section" id="lineas">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-es="Qué distribuimos" data-en="What we distribute">Qué distribuimos</span>
+      <h2 data-es="Cinco categorías de insumos" data-en="Five supply categories">Cinco categorías de insumos</h2>
+      <p data-es="Toque una categoría para ver sus productos en el catálogo." data-en="Tap a category to see its products in the catalog.">Toque una categoría para ver sus productos en el catálogo.</p>
+      <div class="accent-rule"></div>
+    </div>
+    <div class="cats-grid">
+      <button class="cat-link reveal" onclick="window.__catFilter&&window.__catFilter('sint')">
+        <span class="cl-ico"><svg width="30" height="30" viewBox="0 0 34 30" fill="none" aria-hidden="true"><path d="M4 15h26v10H4zM4 7h26v6H4z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg></span>
+        <span class="cl-name" data-es="Cauchos sintéticos" data-en="Synthetic rubber">Cauchos sintéticos</span>
+        <span class="cl-num" data-es="8 productos" data-en="8 products">8 productos</span>
+        <span class="cl-go"><span data-es="Ver productos" data-en="View products">Ver productos</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </button>
+      <button class="cat-link reveal" onclick="window.__catFilter&&window.__catFilter('nat')">
+        <span class="cl-ico"><svg width="30" height="30" viewBox="0 0 34 30" fill="none" aria-hidden="true"><path d="M17 4c6 6 9 10 9 14a9 9 0 0 1-18 0c0-4 3-8 9-14z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg></span>
+        <span class="cl-name" data-es="Cauchos naturales" data-en="Natural rubber">Cauchos naturales</span>
+        <span class="cl-num" data-es="4 productos" data-en="4 products">4 productos</span>
+        <span class="cl-go"><span data-es="Ver productos" data-en="View products">Ver productos</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </button>
+      <button class="cat-link reveal" onclick="window.__catFilter&&window.__catFilter('acel')">
+        <span class="cl-ico"><svg width="30" height="30" viewBox="0 0 34 30" fill="none" aria-hidden="true"><path d="M13 4h8M14 4v7l-6 12a3 3 0 0 0 2.7 4.4h12.6A3 3 0 0 0 26 23l-6-12V4" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg></span>
+        <span class="cl-name" data-es="Acelerantes y antioxidantes" data-en="Accelerators & antioxidants">Acelerantes y antioxidantes</span>
+        <span class="cl-num" data-es="16 productos" data-en="16 products">16 productos</span>
+        <span class="cl-go"><span data-es="Ver productos" data-en="View products">Ver productos</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </button>
+      <button class="cat-link reveal" onclick="window.__catFilter&&window.__catFilter('quim')">
+        <span class="cl-ico"><svg width="30" height="30" viewBox="0 0 34 30" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="5" stroke="currentColor" stroke-width="2.2"/><circle cx="22" cy="14" r="5" stroke="currentColor" stroke-width="2.2"/><circle cx="16" cy="23" r="5" stroke="currentColor" stroke-width="2.2"/></svg></span>
+        <span class="cl-name" data-es="Otros químicos" data-en="Other chemicals">Otros químicos</span>
+        <span class="cl-num" data-es="18 productos" data-en="18 products">18 productos</span>
+        <span class="cl-go"><span data-es="Ver productos" data-en="View products">Ver productos</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </button>
+      <button class="cat-link reveal" onclick="window.__catFilter&&window.__catFilter('res')">
+        <span class="cl-ico"><svg width="30" height="30" viewBox="0 0 34 30" fill="none" aria-hidden="true"><path d="M17 5c5 4 8 8 8 12 0 5-3.6 9-8 9s-8-4-8-9c0-4 3-8 8-12z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M17 15v7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span>
+        <span class="cl-name" data-es="Resinas" data-en="Resins">Resinas</span>
+        <span class="cl-num" data-es="4 productos" data-en="4 products">4 productos</span>
+        <span class="cl-go"><span data-es="Ver productos" data-en="View products">Ver productos</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- SECTORES -->
+<section class="section" id="sectores">
+  <div class="grid-bg"></div>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow on-dark" data-es="A quién surtimos" data-en="Who we supply">A quién surtimos</span>
+      <h2 data-es="Sectores que confían en nuestros insumos" data-en="Sectors that trust our supplies">Sectores que confían en nuestros insumos</h2>
+      <p data-es="Nuestros insumos son la materia prima de procesos y productos en industrias que no toleran fallas." data-en="Our supplies are the raw material behind processes and products in industries that don't tolerate failure.">Nuestros insumos son la materia prima de procesos y productos en industrias que no toleran fallas.</p>
+      <div class="accent-rule"></div>
+    </div>
+    <div class="sec-grid reveal">
+      <div class="sec-item"><span class="si-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/></svg></span><div><h4 data-es="Neumáticos" data-en="Tires">Neumáticos</h4><p data-es="Cauchos, negros de humo y acelerantes para producción de llantas." data-en="Rubber, carbon black and accelerators for tire production.">Cauchos, negros de humo y acelerantes para producción de llantas.</p></div></div>
+      <div class="sec-item"><span class="si-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M3 17v-6h5l3 2.5h5.5A4.5 4.5 0 0 1 21 18v1H3z"/><path d="M3 11V7"/></svg></span><div><h4 data-es="Calzado" data-en="Footwear">Calzado</h4><p data-es="Suelas y componentes en SBR, polibutadieno y nitrilo." data-en="Soles and components in SBR, polybutadiene and nitrile.">Suelas y componentes en SBR, polibutadieno y nitrilo.</p></div></div>
+      <div class="sec-item"><span class="si-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="2" y="9" width="20" height="7" rx="3.5"/><circle cx="7" cy="12.5" r="1.4"/><circle cx="17" cy="12.5" r="1.4"/></svg></span><div><h4 data-es="Bandas y correas" data-en="Belts & drives">Bandas y correas</h4><p data-es="Bandas transportadoras y correas de transmisión industrial." data-en="Conveyor belts and industrial transmission drives.">Bandas transportadoras y correas de transmisión industrial.</p></div></div>
+      <div class="sec-item"><span class="si-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.5"/></svg></span><div><h4 data-es="Sellos y mangueras" data-en="Seals & hoses">Sellos y mangueras</h4><p data-es="Juntas y empaques resistentes a aceites y productos químicos." data-en="Gaskets and seals resistant to oils and chemicals.">Juntas y empaques resistentes a aceites y productos químicos.</p></div></div>
+      <div class="sec-item"><span class="si-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M3 15v-3l2-5h14l2 5v3"/><path d="M3 15h18v3H3z"/><circle cx="7.5" cy="18" r="1.6"/><circle cx="16.5" cy="18" r="1.6"/></svg></span><div><h4 data-es="Automotriz y maquinaria" data-en="Automotive & machinery">Automotriz y maquinaria</h4><p data-es="Componentes técnicos de caucho para vehículos y equipos." data-en="Technical rubber components for vehicles and equipment.">Componentes técnicos de caucho para vehículos y equipos.</p></div></div>
+      <div class="sec-item"><span class="si-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg></span><div><h4 data-es="Construcción" data-en="Construction">Construcción</h4><p data-es="Techos, laminados, aislamiento y agregados para mezclas." data-en="Roofing, laminates, insulation and aggregates for compounds.">Techos, laminados, aislamiento y agregados para mezclas.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- NOSOTROS -->
+<section class="section" id="nosotros">
+  <div class="wrap why-grid">
+    <div class="reveal">
+      <div class="section-head" style="margin-bottom:32px">
+        <span class="eyebrow" data-es="Por qué Districauchos JR" data-en="Why Districauchos JR">Por qué Districauchos JR</span>
+        <h2 data-es="Calidad y servicio, desde 2012" data-en="Quality and service, since 2012">Calidad y servicio, desde 2012</h2>
+        <div class="accent-rule"></div>
+      </div>
+      <div class="why-list">
+        <div class="why-item"><span class="why-num">[01]</span><div><h3 data-es="Surtido que cumple" data-en="Inventory that delivers">Surtido que cumple</h3><p data-es="Amplia disponibilidad de cauchos y químicos para que su producción no se detenga." data-en="Broad availability of rubber and chemicals so your production never stops.">Amplia disponibilidad de cauchos y químicos para que su producción no se detenga.</p></div></div>
+        <div class="why-item"><span class="why-num">[02]</span><div><h3 data-es="Asesoría técnica" data-en="Technical advice">Asesoría técnica</h3><p data-es="Le ayudamos a elegir el material correcto según su proceso y aplicación." data-en="We help you choose the right material for your process and application.">Le ayudamos a elegir el material correcto según su proceso y aplicación.</p></div></div>
+        <div class="why-item"><span class="why-num">[03]</span><div><h3 data-es="Entrega cumplida" data-en="Reliable delivery">Entrega cumplida</h3><p data-es="Respondemos cotizaciones el mismo día y despachamos a tiempo en todo el país." data-en="Same-day quote responses and on-time nationwide dispatch.">Respondemos cotizaciones el mismo día y despachamos a tiempo en todo el país.</p></div></div>
+        <div class="why-item"><span class="why-num">[04]</span><div><h3 data-es="Respaldo y confianza" data-en="Backing and trust">Respaldo y confianza</h3><p data-es="Más de una década siendo proveedor de la industria desde Bogotá." data-en="Over a decade supplying industry from Bogotá.">Más de una década siendo proveedor de la industria desde Bogotá.</p></div></div>
+      </div>
+    </div>
+    <div class="why-visual reveal">
+      <img src="img/logo-blanco.png" alt="" aria-hidden="true">
+      <div class="qline">// CALIDAD Y SERVICIO</div>
+      <blockquote data-es="Nuestro nombre lo dice: calidad en cada insumo, servicio en cada entrega." data-en="Our name says it: quality in every supply, service in every delivery.">Nuestro nombre lo dice: calidad en cada insumo, servicio en cada entrega.</blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- PROPOSITO: MISION Y VISION -->
+<section class="section" id="proposito">
+  <div class="grid-bg"></div>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow on-dark" data-es="Nuestro propósito" data-en="Our purpose">Nuestro propósito</span>
+      <h2 data-es="Misión y visión" data-en="Mission and vision">Misión y visión</h2>
+      <p data-es="Districauchos JR es una destacada distribuidora de productos e insumos químicos, constituida legalmente, matriculada y registrada en la Cámara de Comercio de Bogotá, especializada en insumos para la fabricación de todo tipo de cauchos. Con más de 13 años de experiencia en el mercado, nos comprometemos a ofrecer soluciones de alta calidad que satisfacen las necesidades de nuestros clientes." data-en="Districauchos JR is a leading distributor of chemical products and inputs, legally constituted and registered with the Bogotá Chamber of Commerce, specialized in inputs for manufacturing all types of rubber. With over 13 years in the market, we are committed to high-quality solutions that meet our clients' needs.">Districauchos JR es una destacada distribuidora de productos e insumos químicos, constituida legalmente, matriculada y registrada en la Cámara de Comercio de Bogotá, especializada en insumos para la fabricación de todo tipo de cauchos. Con más de 13 años de experiencia en el mercado, nos comprometemos a ofrecer soluciones de alta calidad que satisfacen las necesidades de nuestros clientes.</p>
+      <div class="accent-rule"></div>
+    </div>
+
+    <div class="mv-badge reveal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+      <span data-es="Constituida y registrada en la Cámara de Comercio de Bogotá" data-en="Constituted and registered with the Bogotá Chamber of Commerce">Constituida y registrada en la Cámara de Comercio de Bogotá</span>
+    </div>
+
+    <div class="mv-grid reveal">
+      <div class="mv-card">
+        <div class="mv-head">
+          <span class="mv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span>
+          <h3><span data-es="Misión" data-en="Mission">Misión</span><small>01 · Districauchos JR</small></h3>
+        </div>
+        <div class="mv-rule"></div>
+        <p data-es="En Districauchos JR, nuestra misión es proporcionar productos e insumos químicos de alta calidad para la fabricación de cauchos, garantizando la satisfacción de nuestros clientes a través de un servicio excepcional y soluciones personalizadas. Nos comprometemos a ser un socio estratégico en el crecimiento y desarrollo de la industria del caucho, impulsando la innovación y la sostenibilidad en nuestros procesos. Con más de 13 años de experiencia, buscamos fortalecer nuestras relaciones comerciales y contribuir al éxito de nuestros clientes, ofreciendo siempre productos confiables y de vanguardia." data-en="At Districauchos JR, our mission is to provide high-quality chemical products and inputs for rubber manufacturing, ensuring customer satisfaction through exceptional service and customized solutions. We are committed to being a strategic partner in the growth and development of the rubber industry, driving innovation and sustainability in our processes. With over 13 years of experience, we seek to strengthen our commercial relationships and contribute to our clients' success, always offering reliable and cutting-edge products.">En Districauchos JR, nuestra misión es proporcionar productos e insumos químicos de alta calidad para la fabricación de cauchos, garantizando la satisfacción de nuestros clientes a través de un servicio excepcional y soluciones personalizadas. Nos comprometemos a ser un socio estratégico en el crecimiento y desarrollo de la industria del caucho, impulsando la innovación y la sostenibilidad en nuestros procesos. Con más de 13 años de experiencia, buscamos fortalecer nuestras relaciones comerciales y contribuir al éxito de nuestros clientes, ofreciendo siempre productos confiables y de vanguardia.</p>
+      </div>
+      <div class="mv-card">
+        <div class="mv-head">
+          <span class="mv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="2.8"/></svg></span>
+          <h3><span data-es="Visión" data-en="Vision">Visión</span><small>02 · Districauchos JR</small></h3>
+        </div>
+        <div class="mv-rule"></div>
+        <p data-es="Ser reconocidos como líderes en la distribución de productos e insumos químicos para la fabricación de cauchos en Colombia y en toda América Latina. Aspiramos a ser el socio preferido de nuestros clientes, ofreciendo soluciones innovadoras y de alta calidad que impulsen la competitividad y sostenibilidad de la industria del caucho. A través de la mejora continua y el compromiso con la excelencia, buscamos expandir nuestra presencia en el mercado y contribuir al desarrollo de un sector más eficiente y responsable." data-en="To be recognized as leaders in the distribution of chemical products and inputs for rubber manufacturing in Colombia and across Latin America. We aspire to be our clients' preferred partner, offering innovative, high-quality solutions that drive the competitiveness and sustainability of the rubber industry. Through continuous improvement and a commitment to excellence, we seek to expand our market presence and contribute to a more efficient and responsible sector.">Ser reconocidos como líderes en la distribución de productos e insumos químicos para la fabricación de cauchos en Colombia y en toda América Latina. Aspiramos a ser el socio preferido de nuestros clientes, ofreciendo soluciones innovadoras y de alta calidad que impulsen la competitividad y sostenibilidad de la industria del caucho. A través de la mejora continua y el compromiso con la excelencia, buscamos expandir nuestra presencia en el mercado y contribuir al desarrollo de un sector más eficiente y responsable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- CATALOGO -->
+<section class="section" id="catalogo">
+  <div class="wrap">
+    <div class="section-head reveal" style="margin-bottom:30px">
+      <span class="eyebrow" data-es="Catálogo completo" data-en="Full catalog">Catálogo completo</span>
+      <h2 data-es="Más de 50 productos en existencia" data-en="Over 50 products in stock">Más de 50 productos en existencia</h2>
+      <p data-es="Busque el insumo que necesita y cotícelo al instante por WhatsApp. Si no lo encuentra, escríbanos: lo conseguimos." data-en="Find the input you need and quote it instantly on WhatsApp. Don't see it? Write us — we'll source it.">Busque el insumo que necesita y cotícelo al instante por WhatsApp. Si no lo encuentra, escríbanos: lo conseguimos.</p>
+      <div class="accent-rule"></div>
+    </div>
+
+    <div class="cat-tools reveal">
+      <div class="cat-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input type="text" id="catSearch" data-es-ph="Buscar producto (ej. nitrilo, azufre, resina)" data-en-ph="Search product (e.g. nitrile, sulfur, resin)" placeholder="Buscar producto (ej. nitrilo, azufre, resina)">
+      </div>
+      <div class="cat-count" id="catCount"></div>
+    </div>
+
+    <div class="cat-chips reveal" id="catChips"></div>
+    <div class="cat-grid" id="catGrid"></div>
+    <div class="cat-more" id="catMore"></div>
+  </div>
+</section>
+<script>
+(function(){
+  const PRODUCTS = [{"n": "Caucho Sintético 1502", "c": "sint", "es": "SBR para neumáticos, bandas transportadoras y suelas. Excelente resistencia al desgaste.", "en": "SBR for tires, conveyor belts and soles. Excellent wear resistance.", "img": "img/p-caucho-sintetico-1502.jpg"}, {"n": "Polibutadieno", "c": "sint", "es": "Alta resistencia a la abrasión y a bajas temperaturas. Ideal para neumáticos y suelas.", "en": "High abrasion and low-temperature resistance. Ideal for tires and soles.", "img": "img/p-polibutadieno.jpg"}, {"n": "Nitrilo (NBR)", "c": "sint", "es": "Resistencia superior a aceites y combustibles. Para juntas, sellos y mangueras.", "en": "Superior oil and fuel resistance. For gaskets, seals and hoses.", "img": "img/p-nitrilo-nbr.jpg"}, {"n": "EPDM", "c": "sint", "es": "Excepcional resistencia a la intemperie, el ozono y los químicos. Para sellos y techos.", "en": "Exceptional weather, ozone and chemical resistance. For seals and roofing.", "img": "img/p-epdm.jpg"}, {"n": "Solprene 1205", "c": "sint", "es": "SBR modificado con excelente resistencia al desgaste y fácil procesamiento.", "en": "Modified SBR with excellent wear resistance and easy processing.", "img": "img/p-solprene-1205.jpg"}, {"n": "Nitrilo al 40%", "c": "sint", "es": "Máxima resistencia a aceites, combustibles y químicos agresivos.", "en": "Maximum resistance to oils, fuels and aggressive chemicals.", "img": "img/p-nitrilo-al-40.jpg"}, {"n": "KAMEL", "c": "sint", "es": "Caucho especializado que combina resistencia, flexibilidad y durabilidad.", "en": "Specialty rubber combining strength, flexibility and durability.", "img": "img/p-kamel.jpg"}, {"n": "Ripio Fino", "c": "sint", "es": "Material granular para mezclas de concreto, morteros y agregados de caucho.", "en": "Granular material for concrete mixes, mortars and rubber aggregates.", "img": "img/p-ripio-fino.jpg"}, {"n": "TSR 10 / TSR 20", "c": "nat", "es": "Caucho natural de alta calidad con excepcional resistencia y elasticidad.", "en": "High-grade natural rubber with exceptional strength and elasticity.", "img": "img/p-tsr-10-tsr-20.jpg"}, {"n": "Orejas", "c": "nat", "es": "Caucho natural para sellado efectivo y resistencia al desgaste.", "en": "Natural rubber for effective sealing and wear resistance.", "img": "img/p-orejas.jpg"}, {"n": "Lámina", "c": "nat", "es": "Lámina versátil para aislamiento, revestimientos y protección contra impactos.", "en": "Versatile sheet for insulation, lining and impact protection.", "img": "img/p-lamina.jpg"}, {"n": "Caucho L-5", "c": "nat", "es": "Alta resistencia al desgaste, impactos y cargas pesadas.", "en": "High resistance to wear, impact and heavy loads.", "img": "img/p-caucho-l-5.jpg"}, {"n": "MBT", "c": "acel", "es": "Acelerante de vulcanización que mejora elasticidad y resistencia al desgaste.", "en": "Vulcanization accelerator improving elasticity and wear resistance.", "img": "img/p-mbt.jpg"}, {"n": "MBT Predisperso", "c": "acel", "es": "MBT en formato predisperso para una mezcla más eficiente y homogénea.", "en": "Pre-dispersed MBT for more efficient, homogeneous mixing.", "img": "img/p-mbt-predisperso.jpg"}, {"n": "MBTS", "c": "acel", "es": "Acelerante de curado moderado y controlado, sin sobrecalentamiento.", "en": "Moderate, controlled-cure accelerator without overheating.", "img": "img/p-mbts.jpg"}, {"n": "MBTS Predisperso", "c": "acel", "es": "MBTS predisperso para curado uniforme y fácil incorporación.", "en": "Pre-dispersed MBTS for uniform curing and easy incorporation.", "img": "img/p-mbts-predisperso.jpg"}, {"n": "TMTD", "c": "acel", "es": "Acelerante ultra rápido para procesos de curado más cortos.", "en": "Ultra-fast accelerator for shorter curing processes.", "img": "img/p-tmtd.jpg"}, {"n": "TMTD Predisperso", "c": "acel", "es": "TMTD predisperso para distribución uniforme y curado rápido.", "en": "Pre-dispersed TMTD for uniform distribution and fast curing.", "img": "img/p-tmtd-predisperso.jpg"}, {"n": "DPG", "c": "acel", "es": "Acelerante secundario que refina y controla la velocidad de vulcanización.", "en": "Secondary accelerator that refines and controls cure speed.", "img": "img/p-dpg.jpg"}, {"n": "CBS", "c": "acel", "es": "Acelerante primario de curado moderado con excelente control del proceso.", "en": "Primary moderate-cure accelerator with excellent process control.", "img": "img/p-cbs.jpg"}, {"n": "ZMBT", "c": "acel", "es": "Equilibrio entre velocidad de curado y estabilidad térmica.", "en": "Balance between cure speed and thermal stability.", "img": "img/p-zmbt.jpg"}, {"n": "BHT", "c": "acel", "es": "Antioxidante que previene la oxidación y prolonga la vida útil del caucho.", "en": "Antioxidant preventing oxidation and extending rubber service life.", "img": "img/p-bht.jpg"}, {"n": "6PPD", "c": "acel", "es": "Antioxidante y estabilizante contra el ozono y el envejecimiento prematuro.", "en": "Antioxidant and stabilizer against ozone and premature aging.", "img": "img/p-6ppd.jpg"}, {"n": "Polietilenglicol (PEG)", "c": "acel", "es": "Plastificante y humectante que mejora la procesabilidad de las mezclas.", "en": "Plasticizer and humectant improving compound processability.", "img": "img/p-polietilenglicol-peg.jpg"}, {"n": "TMQ", "c": "acel", "es": "Antioxidante RD que protege ante altas temperaturas y exposición a la luz.", "en": "RD antioxidant protecting against high temperatures and light exposure.", "img": "img/p-tmq.jpg"}, {"n": "OZONI", "c": "acel", "es": "Agente especializado que mejora la resistencia al ozono en compuestos.", "en": "Specialty agent improving ozone resistance in compounds.", "img": "img/p-ozoni.jpg"}, {"n": "Antioxidante Manchante", "c": "acel", "es": "Previene la oxidación y el envejecimiento prematuro del compuesto.", "en": "Prevents oxidation and premature aging of the compound.", "img": "img/p-antioxidante-manchante.jpg"}, {"n": "SPC", "c": "acel", "es": "Agente de curado y reforzador que mejora la adhesión con textiles y metales.", "en": "Curing agent and reinforcer improving adhesion to textiles and metals.", "img": "img/p-spc.jpg"}, {"n": "Peróxido", "c": "quim", "es": "Agente de vulcanización con control preciso del proceso de curado.", "en": "Vulcanizing agent with precise cure-process control.", "img": "img/p-peroxido.jpg"}, {"n": "ZDBC", "c": "quim", "es": "Acelerante con propiedades de refuerzo y resistencia a la intemperie.", "en": "Accelerator with reinforcing and weather-resistance properties.", "img": "img/p-zdbc.jpg"}, {"n": "ZDEC", "c": "quim", "es": "Acelerante de curado rápido con protección adicional al ozono.", "en": "Fast-cure accelerator with added ozone protection.", "img": "img/p-zdec.jpg"}, {"n": "Ácido Esteárico", "c": "quim", "es": "Agente de procesado, plastificante y antiadherente para mezclas.", "en": "Processing aid, plasticizer and anti-stick agent for compounds.", "img": "img/p-acido-estearico.jpg"}, {"n": "Azufre Malla 400", "c": "quim", "es": "Agente de vulcanización de fácil dispersión en las mezclas.", "en": "Easily dispersible vulcanizing agent for compounds.", "img": "img/p-azufre-malla-400.jpg"}, {"n": "Azufre Predisperso", "c": "quim", "es": "Azufre procesado para lograr una dispersión uniforme y curado consistente.", "en": "Processed sulfur for uniform dispersion and consistent curing.", "img": "img/p-azufre-predisperso.jpg"}, {"n": "Colofonia", "c": "quim", "es": "Resina natural de pino que mejora la adhesión, flexibilidad y resistencia.", "en": "Natural pine resin improving adhesion, flexibility and strength.", "img": "img/p-colofonia.jpg"}, {"n": "Sílice ZQ356", "c": "quim", "es": "Agente de refuerzo que mejora resistencia, elasticidad y durabilidad.", "en": "Reinforcing agent improving strength, elasticity and durability.", "img": "img/p-silice-zq356.jpg"}, {"n": "Sílica Hisile Polvo", "c": "quim", "es": "Refuerzo de estructura fina que optimiza el proceso de vulcanización.", "en": "Fine-structure reinforcement optimizing the vulcanization process.", "img": "img/p-silica-hisile-polvo.jpg"}, {"n": "Caolín", "c": "quim", "es": "Carga mineral de refuerzo con estabilidad dimensional y menor costo.", "en": "Mineral reinforcing filler with dimensional stability and lower cost.", "img": "img/p-caolin.jpg"}, {"n": "Negro de Humo N-550", "c": "quim", "es": "Refuerzo para alta resistencia al desgaste, abrasión y estabilidad UV.", "en": "Reinforcement for high wear, abrasion resistance and UV stability.", "img": "img/p-negro-de-humo-n-550.jpg"}, {"n": "Negro de Humo N-330", "c": "quim", "es": "Refuerzo con excelente estabilidad térmica y resistencia a la intemperie.", "en": "Reinforcement with excellent thermal stability and weather resistance.", "img": "img/p-negro-de-humo-n-330.jpg"}, {"n": "Óxido de Zinc", "c": "quim", "es": "Activador de vulcanización y refuerzo. Mejora resistencia y durabilidad.", "en": "Vulcanization activator and reinforcement. Improves strength and durability.", "img": "img/p-oxido-de-zinc.jpg"}, {"n": "Óxido de Zinc Activo", "c": "quim", "es": "Forma altamente reactiva para un curado más eficiente y efectivo.", "en": "Highly reactive form for more efficient, effective curing.", "img": "img/p-oxido-de-zinc-activo.jpg"}, {"n": "Cera Antilux", "c": "quim", "es": "Acabado brillante, desmoldeo y protección adicional contra la intemperie.", "en": "Glossy finish, mold release and added weather protection.", "img": "img/p-cera-antilux.jpg"}, {"n": "Carbonatos", "c": "quim", "es": "Cargas que mejoran la procesabilidad y reducen costos sin perder calidad.", "en": "Fillers improving processability and cutting costs without losing quality.", "img": "img/p-carbonatos.jpg"}, {"n": "PVI", "c": "quim", "es": "Aditivo que controla la velocidad de vulcanización y mejora la estabilidad.", "en": "Additive controlling cure rate and improving stability.", "img": "img/p-pvi.jpg"}, {"n": "Estearato de Zinc", "c": "quim", "es": "Lubricante y desmoldeante que facilita el manejo de las mezclas.", "en": "Lubricant and mold-release agent easing compound handling.", "img": "img/p-estearato-de-zinc.jpg"}, {"n": "Resina E-260", "c": "res", "es": "Resina fenólica modificada como agente adhesivo y de refuerzo.", "en": "Modified phenolic resin as adhesive and reinforcing agent.", "img": "img/p-resina-e-260.jpg"}, {"n": "Resina C9", "c": "res", "es": "Resina hidrocarburo aromática que mejora dureza, resistencia y adhesión.", "en": "Aromatic hydrocarbon resin improving hardness, strength and adhesion.", "img": "img/p-resina-c9.jpg"}, {"n": "Resina Fenólica", "c": "res", "es": "Alta resistencia al calor y gran durabilidad. Refuerza la adhesión.", "en": "High heat resistance and great durability. Boosts adhesion.", "img": "img/p-resina-fenolica.jpg"}, {"n": "Resina Wingtack", "c": "res", "es": "Mejora la pegajosidad y la cohesión en compuestos de caucho.", "en": "Improves tack and cohesion in rubber compounds.", "img": "img/p-resina-wingtack.jpg"}];
+  const CATS = [{"k": "all", "es": "Todos", "en": "All"}, {"k": "sint", "es": "Cauchos sintéticos", "en": "Synthetic rubber"}, {"k": "nat", "es": "Cauchos naturales", "en": "Natural rubber"}, {"k": "acel", "es": "Acelerantes y antioxidantes", "en": "Accelerators & antioxidants"}, {"k": "quim", "es": "Otros químicos", "en": "Other chemicals"}, {"k": "res", "es": "Resinas", "en": "Resins"}];
+  const lang = () => document.body.getAttribute('data-lang') || 'es';
+  const grid = document.getElementById('catGrid');
+  const chips = document.getElementById('catChips');
+  const countEl = document.getElementById('catCount');
+  const search = document.getElementById('catSearch');
+  let active = 'all';
+
+  const catName = k => { const c = CATS.find(x=>x.k===k); return c ? c[lang()] : ''; };
+
+  function waFor(name){
+    const msg = lang()==='es'
+      ? 'Hola Districauchos JR, quisiera cotizar: ' + name
+      : 'Hello Districauchos JR, I would like a quote for: ' + name;
+    return 'https://wa.me/' + (window.WA_NUMBER||'573152642152') + '?text=' + encodeURIComponent(msg);
+  }
+
+  function norm(s){ return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,''); }
+
+  const LIMIT = 12;
+  let expanded = false;
+  const moreEl = document.getElementById('catMore');
+
+  function render(){
+    const q = norm(search.value.trim());
+    const L = lang();
+    const list = PRODUCTS.filter(p =>
+      (active==='all' || p.c===active) &&
+      (!q || norm(p.n).includes(q) || norm(p[L]).includes(q))
+    );
+    const browsing = !q && active==='all' && !expanded;
+    const shown = browsing ? list.slice(0, LIMIT) : list;
+    moreEl.innerHTML = (browsing && list.length > LIMIT)
+      ? '<button type="button">'+(L==='es'
+          ? 'Ver los '+list.length+' productos'
+          : 'View all '+list.length+' products')
+        +'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg></button>'
+      : '';
+    const mb = moreEl.querySelector('button');
+    if(mb) mb.addEventListener('click', ()=>{ expanded = true; render(); });
+    countEl.textContent = L==='es'
+      ? shown.length + ' de ' + PRODUCTS.length + ' productos'
+      : shown.length + ' of ' + PRODUCTS.length + ' products';
+    if(!list.length){
+      grid.innerHTML = '<div class="cat-empty">'+(L==='es'
+        ? 'No encontramos ese producto — escríbanos por WhatsApp y se lo conseguimos.'
+        : "We couldn't find that product — message us on WhatsApp and we'll source it.")+'</div>';
+      return;
+    }
+    grid.innerHTML = shown.map(p => `
+      <article class="cat-card">
+        <div class="cc-top">
+          <img class="cc-thumb" src="${p.img}" alt="${p.n}" loading="lazy">
+          <span class="cc-head">
+            <span class="cc-name">${p.n}</span>
+            <span class="cc-tag">${catName(p.c)}</span>
+          </span>
+        </div>
+        <p class="cc-desc">${p[L]}</p>
+        <a class="cc-cta" href="${waFor(p.n)}" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.7.9 3.7 1.4 5.8 1.4 6.6 0 12-5.4 12-12S18.6 0 12 0zm0 21.8c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.6-1.5-3.4-1.5-5.3C2.6 6.8 6.8 2.6 12 2.6S21.4 6.8 21.4 12 17.2 21.8 12 21.8z"/></svg>
+          ${L==='es' ? 'Cotizar este producto' : 'Quote this product'}
+        </a>
+      </article>`).join('');
+  }
+
+  function renderChips(){
+    const L = lang();
+    chips.innerHTML = CATS.map(c =>
+      `<button class="chip${c.k===active?' active':''}" data-k="${c.k}">${c[L]}</button>`).join('');
+    chips.querySelectorAll('.chip').forEach(b=>b.addEventListener('click',()=>{
+      active = b.dataset.k; renderChips(); render();
+    }));
+  }
+
+  search.addEventListener('input', render);
+  renderChips(); render();
+  window.__renderCatalog = () => { renderChips(); render(); };
+  window.__catFilter = (k) => {
+    active = k; expanded = true; search.value = '';
+    renderChips(); render();
+    document.getElementById('catalogo').scrollIntoView({behavior:'smooth', block:'start'});
+  };
+})();
+</script>
+
+<!-- FLOTA -->
+<section class="section" id="flota">
+  <div class="wrap">
+    <div class="section-head reveal" style="margin-bottom:34px">
+      <span class="eyebrow" data-es="Entrega cumplida" data-en="Reliable delivery">Entrega cumplida</span>
+      <h2 data-es="Nuestra flota en la calle" data-en="Our fleet on the road">Nuestra flota en la calle</h2>
+      <p data-es="Despachamos directo a su planta o bodega. Cumplir la entrega es parte de la calidad y el servicio." data-en="We dispatch straight to your plant or warehouse. Delivering on time is part of our quality and service.">Despachamos directo a su planta o bodega. Cumplir la entrega es parte de la calidad y el servicio.</p>
+      <div class="accent-rule"></div>
+    </div>
+    <div class="fleet reveal">
+      <div class="fleet-track" id="fleetTrack"></div>
+      <button class="fleet-btn prev" id="fleetPrev" aria-label="Anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <button class="fleet-btn next" id="fleetNext" aria-label="Siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 6l6 6-6 6"/></svg></button>
+    </div>
+    <div class="fleet-dots" id="fleetDots"></div>
+  </div>
+</section>
+<script>
+(function(){
+  /* ====== Para AGREGAR más fotos: añade objetos a esta lista ======
+     Foto real:        { img:"foto.jpg", es:"Texto en español", en:"Text in English" }
+     Marcador "+ foto": { add:true, es:"...", en:"..." }                              */
+  const FLEET = [
+    { img:"img/flota-camion.jpg", es:"Despacho en flota propia a Bogotá y toda Colombia", en:"Own-fleet dispatch to Bogotá and across Colombia" },
+    { img:"img/flota-caucho.jpg", es:"Caucho en formas primarias, listo para despacho", en:"Rubber in primary forms, ready to ship" },
+    { img:"img/flota-zinc.jpg", es:"Óxido de zinc 99% — químico base para caucho", en:"99% zinc oxide — base chemical for rubber" },
+    { img:"img/flota-oxido.jpg", es:"Inventario permanente para entrega inmediata", en:"Permanent inventory for immediate delivery" }
+  ];
+  const track=document.getElementById('fleetTrack');
+  const dotsWrap=document.getElementById('fleetDots');
+  const fleetEl=document.querySelector('.fleet');
+  const lang=()=>document.body.getAttribute('data-lang')||'es';
+  let i=0,timer=null;
+  const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  function build(){
+    track.innerHTML=FLEET.map(s=>{
+      const cap=`<div class="fleet-cap" data-es="${s.es}" data-en="${s.en}">${s[lang()]}</div>`;
+      if(s.add){
+        return `<div class="fleet-slide"><div class="fleet-add"><div class="plus"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></div><span data-es="${s.es}" data-en="${s.en}">${s[lang()]}</span></div></div>`;
+      }
+      return `<div class="fleet-slide"><div class="bg" style="background-image:url('${s.img}')"></div><img src="${s.img}" alt="">${cap}</div>`;
+    }).join('');
+    dotsWrap.innerHTML=FLEET.map((_,k)=>`<button class="fleet-dot${k===0?' active':''}" aria-label="Foto ${k+1}"></button>`).join('');
+    dotsWrap.querySelectorAll('.fleet-dot').forEach((d,k)=>d.addEventListener('click',()=>{go(k);reset();}));
+  }
+  function go(n){i=(n+FLEET.length)%FLEET.length;track.style.transform=`translateX(-${i*100}%)`;
+    dotsWrap.querySelectorAll('.fleet-dot').forEach((d,k)=>d.classList.toggle('active',k===i));}
+  function reset(){if(reduce)return;clearInterval(timer);timer=setInterval(()=>go(i+1),5000);}
+  build();
+  document.getElementById('fleetPrev').addEventListener('click',()=>{go(i-1);reset();});
+  document.getElementById('fleetNext').addEventListener('click',()=>{go(i+1);reset();});
+  let sx=0;
+  track.addEventListener('touchstart',e=>sx=e.touches[0].clientX,{passive:true});
+  track.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>40){dx<0?go(i+1):go(i-1);reset();}});
+  fleetEl.addEventListener('mouseenter',()=>clearInterval(timer));
+  fleetEl.addEventListener('mouseleave',reset);
+  reset();
+})();
+</script>
+
+<!-- CLIENTES -->
+<section class="section" id="clientes">
+  <div class="wrap">
+    <div class="section-head reveal" style="margin-bottom:34px">
+      <span class="eyebrow" data-es="Confían en nosotros" data-en="Trusted by">Confían en nosotros</span>
+      <h2 data-es="Industria que compra con confianza" data-en="Industry that buys with confidence">Industria que compra con confianza</h2>
+      <div class="accent-rule"></div>
+    </div>
+  </div>
+  <div class="cli-marquee reveal">
+    <div class="cli-track" id="cliTrack"></div>
+  </div>
+  <div class="wrap">
+    <p class="cli-note" data-es="// Espacio para los logos reales de sus clientes y aliados." data-en="// Slot for your real client and partner logos.">// Espacio para los logos reales de sus clientes y aliados.</p>
+  </div>
+</section>
+
+<!-- COTIZAR -->
+<section class="section" id="cotizar">
+  <div class="grid-bg"></div>
+  <div class="wrap quote-inner">
+    <div class="quote-copy reveal">
+      <span class="eyebrow" data-es="Cotización sin compromiso" data-en="Free quote">Cotización sin compromiso</span>
+      <h2 data-es="Cuéntenos qué necesita" data-en="Tell us what you need">Cuéntenos qué necesita</h2>
+      <p data-es="Indique el material o insumo y le confirmamos disponibilidad, precio y tiempo de entrega el mismo día." data-en="Tell us the material or input and we'll confirm availability, price and lead time the same day.">Indique el material o insumo y le confirmamos disponibilidad, precio y tiempo de entrega el mismo día.</p>
+      <div class="wa-direct">
+        <a href="#" id="waDirect" class="btn btn-ghost on-dark" style="border-color:#fff;color:#fff">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.7.9 3.7 1.4 5.8 1.4 6.6 0 12-5.4 12-12S18.6 0 12 0zm0 21.8c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.6-1.5-3.4-1.5-5.3C2.6 6.8 6.8 2.6 12 2.6S21.4 6.8 21.4 12 17.2 21.8 12 21.8z"/></svg>
+          <span data-es="Prefiero escribir por WhatsApp" data-en="I'd rather message on WhatsApp">Prefiero escribir por WhatsApp</span>
+        </a>
+      </div>
+    </div>
+    <div class="quote-form reveal">
+      <h3 data-es="Solicitar cotización" data-en="Request a quote">Solicitar cotización</h3>
+      <p class="fh" data-es="Toma menos de un minuto." data-en="Takes less than a minute.">Toma menos de un minuto.</p>
+      <div class="field"><label data-es="Nombre y empresa" data-en="Name & company">Nombre y empresa</label><input id="qn" type="text" data-es-ph="Ej. Juan Pérez · Industrias XYZ" data-en-ph="e.g. John Doe · XYZ Industries" placeholder="Ej. Juan Pérez · Industrias XYZ"></div>
+      <div class="field"><label data-es="Material o insumo" data-en="Material or input">Material o insumo</label>
+        <select id="qm">
+          <option value="" data-es="Seleccione…" data-en="Select…">Seleccione…</option>
+          <option>SBR (1502 / Solprene)</option><option>Polibutadieno (BR)</option><option>Nitrilo (NBR)</option>
+          <option>EPDM</option><option data-es="Caucho natural (TSR, lámina…)" data-en="Natural rubber (TSR, sheet…)">Caucho natural (TSR, lámina…)</option>
+          <option data-es="Acelerantes / antioxidantes" data-en="Accelerators / antioxidants">Acelerantes / antioxidantes</option>
+          <option data-es="Químicos básicos" data-en="Base chemicals">Químicos básicos</option>
+          <option data-es="Plásticos / resinas" data-en="Plastics / resins">Plásticos / resinas</option>
+          <option data-es="No estoy seguro — necesito asesoría" data-en="Not sure — I need advice">No estoy seguro — necesito asesoría</option>
+        </select>
+      </div>
+      <div class="field"><label data-es="Detalle de lo que necesita" data-en="Details of what you need">Detalle de lo que necesita</label><textarea id="qd" data-es-ph="Material, presentación, cantidad…" data-en-ph="Material, format, quantity…" placeholder="Material, presentación, cantidad…"></textarea></div>
+      <button class="btn btn-wa" id="qsend">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.7.9 3.7 1.4 5.8 1.4 6.6 0 12-5.4 12-12S18.6 0 12 0z"/></svg>
+        <span data-es="Enviar por WhatsApp" data-en="Send via WhatsApp">Enviar por WhatsApp</span>
+      </button>
+      <p class="fine" data-es="Se abre WhatsApp con su mensaje listo." data-en="WhatsApp opens with your message ready.">Se abre WhatsApp con su mensaje listo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contacto">
+  <div class="wrap foot-top">
+    <div class="foot-brand">
+      <a href="#top" class="brand">
+        <img src="img/logo-blanco.png" alt="Districauchos JR" style="width:46px;height:46px;object-fit:contain">
+        <span class="bt">DISTRICAUCHOS<small>JR · S.A.S.</small></span>
+      </a>
+      <p data-es="Distribución mayorista de cauchos, químicos básicos y plásticos en formas primarias para la industria colombiana. Calidad y servicio desde 2012." data-en="Wholesale distribution of rubber, base chemicals and primary-form plastics for Colombian industry. Quality and service since 2012.">Distribución mayorista de cauchos, químicos básicos y plásticos en formas primarias para la industria colombiana. Calidad y servicio desde 2012.</p>
+    </div>
+    <div class="foot-col">
+      <h4 data-es="Contacto" data-en="Contact">Contacto</h4>
+      <p>Calle 18 Sur 29 B 32<br>Bogotá D.C., Colombia</p>
+      <a href="#" id="footWa">WhatsApp: 315 264 2152</a>
+      <p>Tel: (601) 480 6004</p>
+      <a href="mailto:districauchosjrsas@hotmail.com">districauchosjrsas@hotmail.com</a>
+      <a href="https://www.facebook.com/pedroatle59/?locale=es_LA" target="_blank" rel="noopener">Facebook</a>
+    </div>
+    <div class="foot-col">
+      <h4 data-es="Navegación" data-en="Navigation">Navegación</h4>
+      <a href="#materiales" data-es="Materiales" data-en="Materials">Materiales</a>
+      <a href="#catalogo" data-es="Catálogo de productos" data-en="Product catalog">Catálogo de productos</a>
+      <a href="#sectores" data-es="Sectores" data-en="Sectors">Sectores</a>
+      <a href="#cotizar" data-es="Cotizar" data-en="Get a quote">Cotizar</a>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>© <span id="yr"></span> Districauchos JR S.A.S. · NIT 000.000.000-0</span>
+    <span>BOGOTÁ · COLOMBIA · DESDE 2012</span>
+  </div>
+</footer>
+
+<a href="#" class="wa-float" id="waFloat" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.7.9 3.7 1.4 5.8 1.4 6.6 0 12-5.4 12-12S18.6 0 12 0zm0 21.8c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.6-1.5-3.4-1.5-5.3C2.6 6.8 6.8 2.6 12 2.6S21.4 6.8 21.4 12 17.2 21.8 12 21.8zm5.4-7.1c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.2-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>
+</a>
+
+<script>
+  // ====== CONFIG: cambia por los datos reales del cliente ======
+  const WA_NUMBER = "573152642152"; window.WA_NUMBER = WA_NUMBER; window.WA_NUMBER = WA_NUMBER; // formato internacional sin + ni espacios
+  const waLink = (msg) => `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
+
+  // ---- clients marquee (placeholder logos: reemplazar por logos reales) ----
+  const cliTrack = document.getElementById('cliTrack');
+  const tiles = [
+    '<rect x="6" y="16" width="36" height="16" rx="2"/><text x="52" y="32" font-family="Archivo" font-weight="800" font-size="20">INDUSTRIA</text>',
+    '<circle cx="20" cy="24" r="13"/><text x="40" y="31" font-family="Archivo" font-weight="800" font-size="19">QUÍMICA</text>',
+    '<path d="M10 34 20 12l10 22z"/><text x="38" y="31" font-family="Archivo" font-weight="800" font-size="19">PLANTA</text>',
+    '<rect x="8" y="14" width="22" height="22"/><text x="40" y="31" font-family="Archivo" font-weight="800" font-size="19">MANUFAC</text>',
+    '<circle cx="18" cy="24" r="11"/><circle cx="30" cy="24" r="11"/><text x="48" y="31" font-family="Archivo" font-weight="800" font-size="16">SELLOS</text>',
+    '<rect x="8" y="12" width="26" height="26" rx="13"/><text x="42" y="31" font-family="Archivo" font-weight="800" font-size="18">AGRO</text>'
+  ];
+  function buildMarquee(){
+    const make = () => tiles.map(t =>
+      `<div class="cli-tile"><svg viewBox="0 0 170 48" fill="currentColor">${t}</svg></div>`).join('');
+    cliTrack.innerHTML = make() + make(); // duplicate for seamless loop
+  }
+  buildMarquee();
+
+  // ---- i18n ----
+  const langBtn = document.getElementById('langBtn');
+  const waMsgs = {
+    es: "Buen día, quisiera consultar sobre insumos de Districauchos JR.",
+    en: "Hello, I'd like to ask about supplies from Districauchos JR."
+  };
+  function setLang(lang){
+    document.documentElement.lang = lang;
+    document.body.setAttribute('data-lang', lang);
+    document.querySelectorAll('[data-es]').forEach(el=>{
+      const t = el.getAttribute('data-'+lang); if(t!=null) el.textContent = t;
+    });
+    document.querySelectorAll('[data-es-ph]').forEach(el=>{
+      const t = el.getAttribute('data-'+lang+'-ph'); if(t!=null) el.placeholder = t;
+    });
+    document.title = lang==='es'
+      ? 'Districauchos JR S.A.S. | Insumos de caucho y química industrial · Bogotá'
+      : 'Districauchos JR S.A.S. | Industrial rubber & chemical supplies · Bogotá';
+    langBtn.textContent = lang==='es' ? 'EN' : 'ES';
+    if(window.__renderCatalog) window.__renderCatalog();
+    if(window.__famRelang) window.__famRelang();
+    if(window.__renderCatalog) window.__renderCatalog();
+    const def = waMsgs[lang];
+    ['waFloat','heroWa','waDirect','footWa'].forEach(id=>{
+      const el=document.getElementById(id); if(el) el.href=waLink(def);
+    });
+  }
+  langBtn.addEventListener('click', ()=> setLang(document.body.getAttribute('data-lang')==='es' ? 'en' : 'es'));
+  setLang('es');
+
+  // ---- header shadow ----
+  const header=document.getElementById("top");
+  addEventListener("scroll",()=>header.classList.toggle("scrolled",scrollY>10),{passive:true});
+
+  // ---- mobile menu ----
+  const burger=document.getElementById("burger");
+  const nav=document.getElementById("navlinks");
+  burger.addEventListener("click",()=>{
+    const open=nav.classList.toggle("open");
+    burger.setAttribute("aria-expanded",open);
+  });
+  nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{
+    nav.classList.remove("open");burger.setAttribute("aria-expanded","false");
+  }));
+
+  // ---- quote -> whatsapp ----
+  document.getElementById("qsend").addEventListener("click",()=>{
+    const lang=document.body.getAttribute('data-lang');
+    const n=document.getElementById("qn").value.trim();
+    const m=document.getElementById("qm").value.trim();
+    const d=document.getElementById("qd").value.trim();
+    let msg = lang==='es' ? "Hola Districauchos JR, solicito una cotización." : "Hello Districauchos JR, I'd like a quote.";
+    const L = lang==='es' ? {a:"Nombre/Empresa",b:"Material/Insumo",c:"Detalle"} : {a:"Name/Company",b:"Material/Input",c:"Details"};
+    if(n) msg+=`\n• ${L.a}: ${n}`;
+    if(m) msg+=`\n• ${L.b}: ${m}`;
+    if(d) msg+=`\n• ${L.c}: ${d}`;
+    window.open(waLink(msg),"_blank");
+  });
+
+  // ---- reveal ----
+  const io=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});
+  },{threshold:.12});
+  document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+
+  document.getElementById("yr").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
